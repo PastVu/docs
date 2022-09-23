@@ -28,3 +28,49 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.rules {
+    ol {
+        counter-reset: item;
+        margin-left: 0;
+
+        > li {
+            display: block;
+            text-align: justify;
+            counter-increment: item;
+            font-weight: normal;
+
+            &::before {
+                content: counters(item, ".") ". ";
+            }
+
+            > ol {
+                padding-left: 18px;
+                > li > ol {
+                    padding-left: 38px;
+                }
+            }
+        }
+
+        ol > li {
+            padding: 6px 0;
+        }
+
+    }
+    > ol {
+        padding: 0;
+
+        > li {
+            padding-bottom: 10px;
+            font-weight: bold;
+            &::before {
+                font-weight: bold;
+            }
+
+            p {
+                display: inline-block;
+            }
+        }
+
+    }
+}
