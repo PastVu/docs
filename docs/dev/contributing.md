@@ -3,6 +3,8 @@ title: Contributing
 description: How to participate in development
 tags:
   - Development
+  - contributing
+  - getting started
 sidebar_position: 1
 ---
 
