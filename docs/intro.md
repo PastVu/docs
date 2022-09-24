@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Intro
+# Introduction
 
 [PastVu](https://pastvu.com/) is an online platform for gathering, geo-tagging, attributing and discussing retro photos. A look at the history of humanity habitat.
 

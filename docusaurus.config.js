@@ -38,7 +38,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/kabalin/pastvudocs/',
+            'https://github.com/kabalin/pastvudocs/edit/main',
         },
         blog: false,
         theme: {

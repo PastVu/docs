@@ -3,6 +3,7 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Documentation related to PastVu development."
+    "title": "Developer Resources",
+    "description": "This documentation is aimed at developers. We welcome any keen developer in helping us building PastVu."
   }
 }

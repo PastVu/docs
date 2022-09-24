@@ -11,7 +11,7 @@ sidebar_position: 1
 We welcome any keen developer in helping us building the better PastVu! Any
 contributions are welcome, no matter how big or small.
 
-Contributors are expected to adhere to the [code of conduct](https://github.com/PastVu/pastvu/blob/master/CODE_OF_CONDUCT.md).
+Contributors are expected to adhere to the [code of conduct](./code-of-conduct).
 
 ## Where to start
 
