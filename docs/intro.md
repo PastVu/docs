@@ -2,46 +2,21 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+[PastVu](https://pastvu.com/) is an online platform for gathering, geo-tagging, attributing and discussing retro photos. A look at the history of humanity habitat.
 
-## Getting Started
+## History
 
-Get started by **creating a new site**.
+This project was started in 2009 by Ilya Varlamov and Alexey Duk. Initially it
+was dedicated to historical photos of Moscow (oldmos.ru). As community was
+growing, soon a second site for historical photos of St. Petersburg was
+created (oldspb.ru). In 2013 two projects were merged and migrated into global
+scope platform PastVu. Principal maintainer and software architect of the new
+platform became [Pavel Klimashkin](https://github.com/klimashkin). In 2020 the
+project code [became](https://pastvu.com/news/149) open source, this attracted more
+people to participate and contribute. Over the years, many people have
+uploaded, attributed and geo-located images (photographs, paintings,
+drawings), with support and leading by regional and global moderators and
+administrators team.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
