@@ -3,7 +3,7 @@ sidebar_position: 5
 slug: /rules
 ---
 
-# Project Rules
+# Rules
 
 <div className="rules">
 
