@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'PastVu Resources',
   tagline: 'PastVu is an online platform for gathering, geo-tagging, attributing and discussing retro photos.',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://kabalin.github.io',
+  baseUrl: '/pastvudocs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'https://raw.githubusercontent.com/PastVu/pastvu/master/public/favicon.ico',
@@ -18,6 +18,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'kabalin', // Usually your GitHub org/user name.
   projectName: 'pastvudocs', // Usually your repo name.
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -71,7 +72,7 @@ const config = {
             label: 'Rules',
           },
           {
-            href: 'https://github.com/pastvu/docs',
+            href: 'https://github.com/kabalin/pastvudocs',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
