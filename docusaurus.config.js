@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/pastvudocs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'https://raw.githubusercontent.com/PastVu/pastvu/master/public/favicon.ico',
+  favicon: './img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -56,7 +56,7 @@ const config = {
         title: 'PastVu',
         logo: {
           alt: 'PastVu Logo',
-          src: 'https://raw.githubusercontent.com/PastVu/pastvu/master/public/img/misc/logo.png',
+          src: './img/logo.png',
         },
         items: [
           {
