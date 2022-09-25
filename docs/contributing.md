@@ -1,5 +1,6 @@
 ---
-title: Contributing
+id: contributing
+title: Improve Docs
 tags:
   - contributing
   - getting started
@@ -7,6 +8,10 @@ sidebar_position: 3
 ---
 
 # Contributing to Docs
+
+:::info
+For contributing as developer, see [Developer resources](./dev/contributing).
+:::
 
 We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusarus.io), a powerful open source documentation project written in JavaScript. All development and communication for this documentation resources takes place in this [GitHub repository](https://github.com/pastvu/docs).
 
