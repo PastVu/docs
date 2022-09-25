@@ -70,6 +70,12 @@ const config = {
             position: 'right',
             label: 'Rules',
           },
+          {
+            href: 'https://github.com/pastvu/docs',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
         ],
       },
       footer: {
