@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PastVu documentation',
+  title: 'PastVu Resources',
   tagline: 'PastVu is an online platform for gathering, geo-tagging, attributing and discussing retro photos.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
