@@ -5,7 +5,16 @@
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.card-description {
+  min-height: 6rem;
+}
+
+.card-button {
+  margin-top: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }

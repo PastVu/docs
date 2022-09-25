@@ -1,58 +1,72 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
+  link: string;
+  linkText: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'PastVu Project',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Anyone is welcome to get involved by adding photos and discussing them, helping to identify locations, improving information accuracy.
       </>
     ),
+    link: 'https://pastvu.com',
+    linkText: 'Open PastVu',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Project Rules',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Read PastVu project rules that platform users have to follow.
       </>
     ),
+    link: '/rules',
+    linkText: 'View Rules',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Contributing',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Find ways how one can participate and help project to evolve.
       </>
     ),
+    link: '/contributing',
+    linkText: 'Start contributing',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
+
+function Feature({
+    index, title, description, link, linkText,
+}) {
+    return (
+        <div className={clsx('col col--4 ', styles.card, styles[`card-${index}`])}>
+            <div className={styles['card-inner']}>
+                <div className={styles['card-content']}>
+                    <h2>{title}</h2>
+                    <div className={styles['card-description']}>
+                        {description}
+                    </div>
+                    <div className={styles.buttons}>
+                        <Link
+                        className={clsx('button button--primary button--lg', styles['card-button'])}
+                        to={link}>
+                        {linkText}
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default function HomepageFeatures(): JSX.Element {
