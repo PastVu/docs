@@ -1,41 +1,26 @@
-# Website
+# PastVu Resources
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This repository includes the source for the PastVu Resources - a collection of documentation resources related to PastVu project. The website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-### Installation
+## Contributing
 
-```
-$ yarn
-```
+There are many ways that you can help, from reporting inaccuracies, and missing
+documentation, to making small corrections and, of course, creating new
+resources for others to make use of.
 
-### Local Development
+If you plan to contribute, then you may wish to setup a local development
+environment to make it easier to do so.
 
-```
-$ yarn start
-```
+Read our [contributing guide](https://kabalin.github.io/pastvudocs/contributing) for more details.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Local installation
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
+If you want to jump right in then the easiest way is using [NVM](https://github.com/nvm-sh/nvm) and then running:
 
 ```
-$ USE_SSH=true yarn deploy
+nvm install
+npm i -g yarn
+yarn
+yarn start
 ```
 
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
