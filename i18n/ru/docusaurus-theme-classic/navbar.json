@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "PastVu",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "База знаний",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Rules": {
+    "message": "Правила",
+    "description": "Navbar item with label Rules"
+  }
+}

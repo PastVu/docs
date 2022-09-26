@@ -24,8 +24,16 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ru',
+    locales: ['en', 'ru'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      },
+      ru: {
+        htmlLang: 'ru-RU',
+      },
+    },
   },
   plugins: ['docusaurus-plugin-sass'],
   presets: [
@@ -59,6 +67,10 @@ const config = {
           src: './img/logo.png',
         },
         items: [
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
           {
             type: 'doc',
             docId: 'intro',

@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
+import Translate, {translate} from '@docusaurus/Translate';
 
 type FeatureItem = {
   title: string;
@@ -13,34 +14,34 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'PastVu Project',
+    title: <Translate id="homepage.cards.openPastvu.title">PastVu Project</Translate>,
     description: (
-      <>
+      <Translate id="homepage.cards.openPastvu.description">
         Anyone is welcome to get involved by adding photos and discussing them, helping to identify locations, improving information accuracy.
-      </>
+      </Translate>
     ),
     link: 'https://pastvu.com',
-    linkText: 'Open PastVu',
+    linkText: <Translate id="homepage.cards.openPastvu.linkText">Open PastVu</Translate>,
   },
   {
-    title: 'Project Rules',
+    title: <Translate id="homepage.cards.rules.title">Project Rules</Translate>,
     description: (
-      <>
+      <Translate id="homepage.cards.rules.description">
         Read PastVu project rules that platform users have to follow.
-      </>
+      </Translate>
     ),
     link: '/rules',
-    linkText: 'View Rules',
+    linkText: <Translate id="homepage.cards.rules.linkText">View Rules</Translate>,
   },
   {
-    title: 'Contributing',
+    title: <Translate id="homepage.cards.contributing.title">Contributing</Translate>,
     description: (
-      <>
+      <Translate id="homepage.cards.contributing.description">
         Find ways how one can participate and help project to evolve.
-      </>
+      </Translate>
     ),
     link: '/contributing',
-    linkText: 'Start contributing',
+    linkText: <Translate id="homepage.cards.contributing.linkText">Start contributing</Translate>,
   },
 ];
 
