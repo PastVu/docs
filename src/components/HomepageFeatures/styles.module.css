@@ -5,6 +5,12 @@
   width: 100%;
 }
 
+.card-content h2 {
+  vertical-align: middle;
+  padding: 2rem 0;
+  height: 6rem;
+}
+
 .card-description {
   min-height: 6rem;
 }
