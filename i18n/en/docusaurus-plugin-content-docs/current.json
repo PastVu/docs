@@ -3,16 +3,16 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Development": {
+  "sidebar.mainSidebar.category.Development": {
     "message": "Development",
-    "description": "The label for category Development in sidebar tutorialSidebar"
+    "description": "The label for category Development in sidebar mainSidebar"
   },
-  "sidebar.tutorialSidebar.category.Development.link.generated-index.title": {
+  "sidebar.mainSidebar.category.Development.link.generated-index.title": {
     "message": "Developer Resources",
-    "description": "The generated-index page title for category Development in sidebar tutorialSidebar"
+    "description": "The generated-index page title for category Development in sidebar mainSidebar"
   },
-  "sidebar.tutorialSidebar.category.Development.link.generated-index.description": {
+  "sidebar.mainSidebar.category.Development.link.generated-index.description": {
     "message": "This documentation is aimed at developers. We welcome any keen developer in helping us building PastVu.",
-    "description": "The generated-index page description for category Development in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category Development in sidebar mainSidebar"
   }
 }
