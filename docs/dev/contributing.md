@@ -1,6 +1,6 @@
 ---
-title: Contributing
-description: How to participate in development
+title: Getting Started
+description: Setup development environment and take first steps.
 tags:
   - Development
   - contributing
@@ -8,24 +8,7 @@ tags:
 sidebar_position: 1
 ---
 
-# Contributing to PastVu
-
-We welcome any keen developer in helping us building the better PastVu! Any
-contributions are welcome, no matter how big or small.
-
-Contributors are expected to adhere to the [code of conduct](./code-of-conduct).
-
-## Where to start
-
-The good starting point is a list of [good first
-issues](https://github.com/PastVu/pastvu/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22),
-each of them is relatively simple and will help you to familiarise with a
-code. If you have questions, you may ask them in the issue comments, or in
-[discussion board](https://github.com/PastVu/pastvu/discussions).
-
-If you are new to contributing to open source project, you may find [this
-guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
-useful.
+# Getting Started
 
 Follow setup instructions below to deploy local copy of the project. This will
 allow you to start with development.

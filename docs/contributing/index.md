@@ -29,4 +29,20 @@ If you think you have found a security issue, please email at support@pastvu.com
 
 We expect all project participants to follow [code of conduct](./dev/code-of-conduct)
 
+## Development
+
+We welcome any keen developer in helping us building the better PastVu! Any
+contributions are welcome, no matter how big or small.
+
+### Where to start
+
+The good starting point is a list of [good first
+issues](https://github.com/PastVu/pastvu/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22),
+each of them is relatively simple and will help you to familiarise with a
+code. If you have questions, you may ask them in the issue comments, or in
+[discussion board](https://github.com/PastVu/pastvu/discussions).
+
+If you are new to contributing to open source project, you may find [this
+guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
+useful.
 
