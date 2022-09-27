@@ -1,11 +1,11 @@
 ---
-title: Improve docs
+title: Improve Docs
 tags:
   - contributing
   - getting started
 ---
 
-# Contributing to Docs
+# Improve Docs
 
 We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusarus.io), a powerful open source documentation project written in JavaScript. All development and communication for this documentation resources takes place in this [GitHub repository](https://github.com/pastvu/docs).
 
@@ -19,10 +19,10 @@ useful.
 
 Anyone can get involved with, and add to, this documentation - you don't have to be a developer. Here are a few ideas to get started:
 
-- Fix typos and grammatical errors
-- Document PastVu functionality of your choice
-- Check existing issues on GitHub
+- Fix typos, grammatical errors or improve anything that sounds confusing or incomplete. You can click "Edit this page" at the bottom of most docs, which takes you to the GitHub interface to make and propose changes
+- Check existing documentation issues on GitHub
 - Raise issues in GitHub for features which need to be documented.
+- Document PastVu functionality of your choice
 
 ## Development
 
