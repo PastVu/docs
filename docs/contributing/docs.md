@@ -23,6 +23,9 @@ Anyone can get involved with, and add to, this documentation - you don't have to
 - Check existing documentation issues on GitHub
 - Raise issues in GitHub for features which need to be documented.
 - Document PastVu functionality of your choice
+- Translate documentation
+
+You may find useful information at Docusarus [Markdown Features](https://docusaurus.io/docs/markdown-features) section.
 
 ## Development
 
@@ -30,7 +33,7 @@ It's easy to get your development environment set up and if you plan to contribu
 
 ### Online setup
 
-You can also try using the new github.dev feature. While you are browsing any file, changing the domain name from github.com to github.dev will turn your browser into an online editor. You can start making changes and send pull requests right away.
+You can also try using the new `github.dev` feature. While you are browsing any file, changing the domain name from `github.com` to `github.dev` will turn your browser into an online editor. You can start making changes and send pull requests right away.
 
 ### Local installation
 
@@ -48,5 +51,41 @@ To start development server run:
 yarn start
 ```
 
-The start command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+The start command builds your website locally and serves it through a development server, ready for you to view at `http://localhost:3000/docs`.
+
+### i18n
+
+Docusarus is configured to support multiple locales. Currently Englsh and Russian languages are supported. English is the main language, documents in English are organised the standard way (as in single-language website), e.g. documents are located under the subroute `docs/` and pages are at subroute `src/pages/`.
+
+Russian translations are located at locale subdirs, for documents
+this will be `i18n/ru/docusaurus-plugin-content-docs/current` and for pages `i18n/ru/docusaurus-plugin-content-pages`.
+
+:::info
+Organising documents this way allows to fallback to English version of the page when
+Russian translation is missing.
+:::
+
+In order to make document appear in the page sidebar, the file should be added at default location (`docs/`). In this case the same document will be shown at both `en` and `ru` locales. To add the Russian translation, copy it to the matching destination at `i18n/ru/docusaurus-plugin-content-docs/current` and translate. For example, to translate `docs/dev/setup.md`, one need to make a copy:
+```
+cp docs/dev/setup.md i18n/ru/docusaurus-plugin-content-docs/current/dev/setup.md
+```
+
+:::caution
+We only copy .md and .mdx files, as React pages are translated through JSON translation files.
+:::
+
+#### Starting dev server for specific locale
+
+Use `--locale` param with start script, i.e. to start server using Russian
+locale run:
+
+```
+yarn start --locale ru
+```
+
+or for English:
+
+```
+yarn start --locale en
+```
 
