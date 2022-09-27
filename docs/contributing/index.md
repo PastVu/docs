@@ -59,6 +59,6 @@ code. If you have questions, you may ask them in the issue comments, or in
 [discussion board](https://github.com/PastVu/pastvu/discussions).
 
 You will need a local development environment to start work on the project,
-see [Getting started](/dev/contributing) development manual for details.
+see [Getting started](/dev/setup) development manual for details.
 
 
