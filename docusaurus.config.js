@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'PastVu Resources',
   tagline: 'PastVu is an online platform for gathering, geo-tagging, attributing and discussing retro photos.',
-  url: 'https://pastvu.github.io',
-  baseUrl: '/docs/',
+  url: 'https://docs.pastvu.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: './img/favicon.ico',
