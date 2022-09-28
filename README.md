@@ -11,7 +11,7 @@ resources for others to make use of.
 If you plan to contribute, then you may wish to setup a local development
 environment to make it easier to do so.
 
-Read our [contributing guide](https://docs.pastvu.com/contributing) for more details.
+Read our [contributing guide](https://docs.pastvu.com/en/contributing/docs) for more details.
 
 ### Local installation
 

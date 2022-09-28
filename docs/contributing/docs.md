@@ -7,7 +7,7 @@ tags:
 
 # Improve Docs
 
-We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusarus.io), a powerful open source documentation project written in JavaScript. All development and communication for this documentation resources takes place in this [GitHub repository](https://github.com/pastvu/docs).
+We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusaurus.io), a powerful open source documentation project written in JavaScript. All development and communication for this documentation resources takes place in this [GitHub repository](https://github.com/pastvu/docs).
 
 Contributors are expected to adhere to the [code of conduct](./dev/code-of-conduct).
 
@@ -51,9 +51,9 @@ To start development server run:
 yarn start
 ```
 
-The start command builds your website locally and serves it through a development server, ready for you to view at `http://localhost:3000/docs`.
+The start command builds your website locally and serves it through a development server, ready for you to view at `http://localhost:3000`.
 
-### i18n
+## i18n
 
 Docusarus is configured to support multiple locales. Currently Englsh and Russian languages are supported. English is the main language, documents in English are organised the standard way (as in single-language website), e.g. documents are located under the subroute `docs/` and pages are at subroute `src/pages/`.
 
@@ -74,7 +74,7 @@ cp docs/dev/setup.md i18n/ru/docusaurus-plugin-content-docs/current/dev/setup.md
 We only copy .md and .mdx files, as React pages are translated through JSON translation files.
 :::
 
-#### Starting dev server for specific locale
+### Starting dev server for specific locale
 
 Use `--locale` param with start script, i.e. to start server using Russian
 locale run:
@@ -87,5 +87,33 @@ or for English:
 
 ```
 yarn start --locale en
+```
+:::info
+Starting server without locale param will run server in default locale per `defaultLocale` configuration setting - this is currently `ru`.
+:::
+
+## Pull Requests
+
+Please make sure the following is done when submitting a pull request:
+
+1. **Keep your PR small** - make sure the PR changes belong to the same scope, otherwise please split it.
+2. **Use descriptive titles** - you may use [commit message style](#semantic-commit-messages) for PR titles too.
+3. **Test your changes** - unless this is something trivial or changes existing text, makes sure you tested it in local dev server.
+
+All pull requests should be opened against the `main` branch.
+
+When PR is created, our integration systems will run automated tests to guard against mistakes. The maintainers will review your code, once PR is merged CI system will deploy them to documentation resources website.
+
+### Semantic Commit Messages
+
+Please follow commit messages format:
+
+`<scope> (<locale>): <subject>`
+
+
+`<locale>` is optional. `<scope>` reflects the area of chnage, e.g. `style`, `docs`, `pages`, `config`, etc. For example:
+
+```
+docs en: Add information about multilanguage support
 ```
 
