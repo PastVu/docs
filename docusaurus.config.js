@@ -8,16 +8,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'PastVu Resources',
   tagline: 'PastVu is an online platform for gathering, geo-tagging, attributing and discussing retro photos.',
-  url: 'https://kabalin.github.io',
-  baseUrl: '/pastvudocs/',
+  url: 'https://pastvu.github.io',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: './img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'kabalin', // Usually your GitHub org/user name.
-  projectName: 'pastvudocs', // Usually your repo name.
+  organizationName: 'pastvu', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
   trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -47,7 +47,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/kabalin/pastvudocs/edit/main',
+            'https://github.com/pastvu/docs/edit/main',
         },
         blog: false,
         theme: {
@@ -84,7 +84,7 @@ const config = {
             label: 'Rules',
           },
           {
-            href: 'https://github.com/kabalin/pastvudocs',
+            href: 'https://github.com/pastvu/docs',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
