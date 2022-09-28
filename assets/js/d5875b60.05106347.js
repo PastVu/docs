@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpastvudocs=self.webpackChunkpastvudocs||[]).push([[942],{249:a=>{a.exports=JSON.parse('{"label":"API","permalink":"/tags/api","allTagsPath":"/tags","count":1,"items":[{"id":"dev/api","title":"API","description":"\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 API \u043c\u0435\u0442\u043e\u0434\u043e\u0432","permalink":"/dev/api"}]}')}}]);
