@@ -59,12 +59,12 @@ skip | int | | skip the specified number of photos from the beginning of the sea
 
 ### photo.getByBounds
 
-Returns photos and clusters on the map by the passed zoom, GeoJSON object (Polygon or MultiPolygon) and optional year limit. The sequence of points in the array that forms the polygon must follow a counterclockwise path to sample objects within its boundaries (see [RFC7946 3.1.6](https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6)). The order in which coordinates are represented at points is `[lon, lat]`. From zoom 17 and up only photos are returned, up to and including 16 both photos and clusters can be returned.
+Returns photos and clusters on the map by the passed zoom, GeoJSON object (Polygon or MultiPolygon) and optional year limit. The sequence of points in the array that forms the polygon must follow a counterclockwise path to sample objects within its boundaries (see [RFC7946 3.1.6](https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6)). The order of coordinates at points is `[lon, lat]`. From zoom 17 and up only photos are returned, for zoom level 16 and below both photos and clusters can be returned.
 
 Parameter | Mandatory | Type | Default | Description |
 --- | --- | --- | --- | --- |
 geometry | ✓ | GeoJSON (Polygon or MultiPolygon) | search area |
-z | ✓ int |-- --- --- --- --- --- geoJSON (Polygon or MultiPolygon)
+z | ✓ | int | |  zoom level
 isPainting | | bool | 0 | return only pictures in the response |
 year | | int | | lower limit of the year of the photo |
 year2 | | int | | upper limit of the year of the photo |
@@ -72,6 +72,5 @@ localWork | | bool | 0 | return array of `photos` (set 1 when using zoom value >
 
 **Query example:**
 
- `https://pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37. 95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
-
+`https://pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37. 95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
 
