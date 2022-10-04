@@ -9,7 +9,7 @@ tags:
 
 We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusaurus.io), a powerful open source documentation project written in JavaScript. All development and communication for this documentation resources takes place in this [GitHub repository](https://github.com/pastvu/docs).
 
-Contributors are expected to adhere to the [code of conduct](./dev/code-of-conduct).
+Contributors are expected to adhere to the [code of conduct](./contributing/code-of-conduct).
 
 If you are new to contributing to open source project, you may find [this
 guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
