@@ -1,5 +1,6 @@
 ---
 id: intro
+slug: /about
 sidebar_position: 1
 ---
 
