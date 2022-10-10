@@ -44,6 +44,17 @@ All development takes place in [PastVu GitHub repository](https://github.com/Pas
 
 All pull requests are checked by the continuous integration system which has a range of unit tests, style and lint tests, build tests.
 
+### Licensing
+
+By contributing to PastVu, you agree that your contributions will be licensed under its [AGPLv3+](https://github.com/pastvu/pastvu/blob/master/COPYING) license. We are using simplified copyright header per Linux Foundation [guidelines](https://www.linuxfoundation.org/blog/blog/copyright-notices-in-open-source-software-projects) and single line license delcaration. The following header should be present in all code files (except third-party source code, e.g. libraries):
+
+```js
+/**
+ * Copyright: The PastVu contributors.
+ * GNU Affero General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/agpl.txt)
+ */
+```
+
 ### Where to start
 
 If you are new to Open Source contributions, you may find those guides
