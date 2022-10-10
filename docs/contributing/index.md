@@ -31,7 +31,7 @@ If you think you have found a security issue, please email at support@pastvu.com
 
 ## Code of Conduct
 
-We expect all project participants to follow [code of conduct](./dev/code-of-conduct)
+We expect all project participants to follow [code of conduct](./contributing/code-of-conduct)
 
 ## Development
 

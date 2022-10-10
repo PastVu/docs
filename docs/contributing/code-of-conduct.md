@@ -2,8 +2,7 @@
 title: Code of Conduct
 description: Contributor Covenant Code of Conduct
 tags:
-  - Development
-sidebar_position: 2
+  - contributing
 ---
 
 # Code of Conduct
