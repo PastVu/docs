@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpastvudocs=self.webpackChunkpastvudocs||[]).push([[292],{1753:a=>{a.exports=JSON.parse('{"label":"mongodb","permalink":"/en/tags/mongodb","allTagsPath":"/en/tags","count":1,"items":[{"id":"dev/migratemongo","title":"Database Migration","description":"Making changes in the database","permalink":"/en/dev/migratemongo"}]}')}}]);
