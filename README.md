@@ -24,3 +24,6 @@ yarn
 yarn start
 ```
 
+## License
+
+PastVu documentation is licensed under a [Creative Commons Attribution 4.0 International license](https://github.com/pastvu/docs/blob/master/LICENSE).

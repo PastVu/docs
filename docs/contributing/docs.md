@@ -9,11 +9,13 @@ tags:
 
 We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusaurus.io), a powerful open source documentation project written in JavaScript. All development and communication for this documentation resources takes place in this [GitHub repository](https://github.com/pastvu/docs).
 
-Contributors are expected to adhere to the [code of conduct](./contributing/code-of-conduct).
+Contributors are expected to adhere to the [code of conduct](./code-of-conduct).
 
 If you are new to contributing to open source project, you may find [this
 guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
 useful.
+
+By contributing to this documentation, you agree that your contributions will be licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/) (CC-BY 4.0).
 
 ## Get Involved
 
@@ -22,10 +24,10 @@ Anyone can get involved with, and add to, this documentation - you don't have to
 - Fix typos, grammatical errors or improve anything that sounds confusing or incomplete. You can click "Edit this page" at the bottom of most docs, which takes you to the GitHub interface to make and propose changes
 - Check existing documentation issues on GitHub
 - Raise issues in GitHub for features which need to be documented.
-- Document PastVu functionality of your choice
+- Document existing PastVu functionality as user manual or developer resource.
 - Translate documentation
 
-You may find useful information at Docusarus [Markdown Features](https://docusaurus.io/docs/markdown-features) section.
+You may find useful information at Docusaurus [Markdown Features](https://docusaurus.io/docs/markdown-features) section.
 
 ## Development
 

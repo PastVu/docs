@@ -95,7 +95,7 @@ const config = {
         ],
       },
       footer: {
-        copyright: `© ${new Date().getFullYear()} PastVu documentation. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} PastVu documentation. Built with Docusaurus.`, // Not in use, see i18n/en/docusaurus-theme-classic/footer.json
       },
       prism: {
         theme: lightCodeTheme,
