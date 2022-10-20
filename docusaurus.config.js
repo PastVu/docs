@@ -35,7 +35,20 @@ const config = {
       },
     },
   },
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass',
+    ["@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          // Since 'ru' is default locale, '/ru' path is omitted. We need redirect for some pages where url
+          // may differ based on user locale in the app.
+          {
+            to: '/rules',
+            from: '/ru/rules',
+          },
+        ],
+      }
+    ],
+  ],
   presets: [
     [
       'classic',
