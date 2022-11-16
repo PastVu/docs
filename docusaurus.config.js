@@ -69,6 +69,9 @@ const config = {
         gtag: {
           trackingID: "G-VC6PK6N277",
         },
+        sitemap: {
+          ignorePatterns: ['/tags/**'],
+        },
       }),
     ],
   ],
