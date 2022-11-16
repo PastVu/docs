@@ -27,7 +27,7 @@ docker compose exec mongo initdb
 # Create config file
 cp ./config/local.config.js.docker-example ./config/local.config.js
 # Install node modules
-docker compose run --rm app npm install
+docker compose run --rm --no-deps app npm install
 # Start the application
 docker compose up
 ```
