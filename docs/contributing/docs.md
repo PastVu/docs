@@ -98,7 +98,7 @@ Starting server without locale param will run server in default locale per `defa
 
 Please make sure the following is done when submitting a pull request:
 
-1. **Keep your PR small** - make sure the PR changes belong to the same scope, otherwise please split it.
+1. **Keep your PR small** - make sure the PR changes belong to the same scope, otherwise please split them.
 2. **Use descriptive titles** - you may use [commit message style](#semantic-commit-messages) for PR titles too.
 3. **Test your changes** - unless this is something trivial or changes existing text, makes sure you tested it in local dev server.
 

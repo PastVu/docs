@@ -44,17 +44,6 @@ All development takes place in [PastVu GitHub repository](https://github.com/Pas
 
 All pull requests are checked by the continuous integration system which has a range of unit tests, style and lint tests, build tests.
 
-### Licensing
-
-By contributing to PastVu, you agree that your contributions will be licensed under its [AGPLv3+](https://github.com/pastvu/pastvu/blob/master/COPYING) license. We are using simplified copyright header per Linux Foundation [guidelines](https://www.linuxfoundation.org/blog/blog/copyright-notices-in-open-source-software-projects) and single line license delcaration. The following header should be present in all code files (except third-party source code, e.g. libraries):
-
-```js
-/**
- * Copyright: The PastVu contributors.
- * GNU Affero General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/agpl.txt)
- */
-```
-
 ### Where to start
 
 If you are new to Open Source contributions, you may find those guides
@@ -72,4 +61,26 @@ code. If you have questions, you may ask them in the issue comments, or in
 You will need a local development environment to start work on the project,
 see [Getting started](/dev/setup) development manual for details.
 
+### Pull Requests
+
+Please make sure the following is done when submitting a pull request:
+
+1. **Keep your PR small** - make sure the PR changes belong to the same scope, otherwise please split them.
+2. **Use descriptive commit message subjects** - keep it short and focused, if more details needed write them in commit message body.
+3. **Test your changes** - make sure you tested changes on local dev server.
+
+All pull requests should be opened against the `master` branch.
+
+When PR is created, our integration systems will run automated tests to guard against mistakes. The maintainers will review your code, once PR is merged CI system will deploy them to documentation resources website.
+
+### Licensing
+
+By contributing to PastVu, you agree that your contributions will be licensed under its [AGPLv3+](https://github.com/pastvu/pastvu/blob/master/COPYING) license. We are using simplified copyright header per Linux Foundation [guidelines](https://www.linuxfoundation.org/blog/blog/copyright-notices-in-open-source-software-projects) and single line license delcaration. The following header should be present in all code files (except third-party source code, e.g. libraries):
+
+```js
+/**
+ * Copyright: The PastVu contributors.
+ * GNU Affero General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/agpl.txt)
+ */
+```
 
