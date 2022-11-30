@@ -286,5 +286,61 @@
   },
   "siteConfig.tagline": {
     "message": "Проект по сбору фотографий прошлого. Взгляд на историю среды обитания человечества."
+  },
+  "person.ilya.name": {
+    "message": "Илья Варламов"
+  },
+  "person.ilya.desc": {
+    "message": "Автор оригинальной идеи."
+  },
+  "person.klimashkin.name": {
+    "message": "Павел Климашкин"
+  },
+  "person.klimashkin.desc": {
+    "message": "Архитектор проекта, создатель платформы."
+  },
+  "person.abdulla_hasan.name": {
+    "message": "Anvar Paganini"
+  },
+  "person.abdulla_hasan.desc": {
+    "message": "Инфраструктура, CRM."
+  },
+  "person._p_k.name": {
+    "message": "Павел К."
+  },
+  "person._p_k.desc": {
+    "message": "Взаимодействие с сообществом, управление задачами, UX аналитик."
+  },
+  "person.dema501.name": {
+    "message": "Дмитрий Башлов"
+  },
+  "person.dema501.desc": {
+    "message": "Системное администрирование"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Закрыть панель навигации",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Переключить навигационную панель",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "person.aeifn.name": {
+    "message": "Егор Кузьмичев"
+  },
+  "person.aeifn.desc": {
+    "message": "DevOps, CI/CD, сопровождение кода."
+  },
+  "person.nowhereman.name": {
+    "message": "Руслан Кабалин"
+  },
+  "person.nowhereman.desc": {
+    "message": "Разработчик, сопровождение кода."
+  },
+  "person.duche.name": {
+    "message": "Алексей Дук"
+  },
+  "person.duche.desc": {
+    "message": "Продюсер проекта в 2009 – 2018 годах."
   }
 }

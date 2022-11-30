@@ -4,7 +4,7 @@ slug: /about
 sidebar_position: 1
 ---
 
-import {MainTeam, CollabTeam, AlumniTeam} from '../src/components/Teams';
+import {MainTeam, CollabTeam, AlumniTeam} from '@site/src/components/Teams';
 
 # Introduction
 

@@ -58,16 +58,16 @@ import {MainTeam, CollabTeam, AlumniTeam} from '@site/src/components/Teams';
 * 2022
   * Запущен [проект документации PastVu](https://docs.pastvu.com/)
 
-## Team
+## Команда
 
 <MainTeam></MainTeam>
 
-### Project Collaborators
+### Участники проекта
 
 <CollabTeam></CollabTeam>
 
-and [many contributors](https://github.com/PastVu/pastvu/graphs/contributors).
+и [многие другие](https://github.com/PastVu/pastvu/graphs/contributors).
 
-### Acknowledgments
+### Благодарности
 
 <AlumniTeam></AlumniTeam>
