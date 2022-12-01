@@ -38,13 +38,6 @@ export function MainTeam (): JSX.Element {
             </Person>
 
             <Person
-                name={translate({ id: 'person.dema501.name', message: "Dmitry Bashlov"})}
-                avatar="img/people/dema501.png"
-                pastvu="dema501"
-            >
-                <Translate id="person.dema501.desc">System administration.</Translate>
-            </Person>
-            <Person
                 name={translate({ id: 'person.aeifn.name', message: "Egor Kuzmichev"})}
                 avatar="img/people/kuzmichev.jpg"
                 github="aeifn"
@@ -75,6 +68,14 @@ export function AlumniTeam (): JSX.Element {
             >
                 <Translate id="person.duche.desc">Producer of the project 2009 - 2018.</Translate>
             </Person>
+
+            <Person
+                name={translate({ id: 'person.dema501.name', message: "Dmitry Bashlov"})}
+                avatar="img/people/dema501.png"
+                pastvu="dema501"
+            >
+                <Translate id="person.dema501.desc">System administration till 2020.</Translate>
+            </Person>            
         </div>
     )
 }
