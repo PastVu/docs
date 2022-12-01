@@ -286,5 +286,61 @@
   },
   "siteConfig.tagline": {
     "message": "PastVu is an online platform for gathering, geo-tagging, attributing and discussing retro photos."
+  },
+  "person.ilya.name": {
+    "message": "Ilya Varlamov"
+  },
+  "person.ilya.desc": {
+    "message": "The author of original idea."
+  },
+  "person.klimashkin.name": {
+    "message": "Pavel Klimashkin"
+  },
+  "person.klimashkin.desc": {
+    "message": "Project's architect, platform creator."
+  },
+  "person.abdulla_hasan.name": {
+    "message": "Anvar Paganini"
+  },
+  "person.abdulla_hasan.desc": {
+    "message": "Infrastructure, client relations."
+  },
+  "person._p_k.name": {
+    "message": "Paul K."
+  },
+  "person._p_k.desc": {
+    "message": "Community relations, issues management, UX analysis."
+  },
+  "person.dema501.name": {
+    "message": "Dmitry Bashlov"
+  },
+  "person.dema501.desc": {
+    "message": "System administration till 2020."
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Close navigation bar",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Toggle navigation bar",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "person.aeifn.name": {
+    "message": "Egor Kuzmichev"
+  },
+  "person.aeifn.desc": {
+    "message": "DevOps, CI/CD, maintainer."
+  },
+  "person.nowhereman.name": {
+    "message": "Ruslan Kabalin"
+  },
+  "person.nowhereman.desc": {
+    "message": "Contributing developer and maintainer."
+  },
+  "person.duche.name": {
+    "message": "Alex Duk"
+  },
+  "person.duche.desc": {
+    "message": "Producer of the project 2009 - 2018."
   }
 }

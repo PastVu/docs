@@ -4,6 +4,8 @@ slug: /about
 sidebar_position: 1
 ---
 
+import {MainTeam, AlumniTeam} from '@site/src/components/Teams';
+
 # Introduction
 
 [PastVu](https://pastvu.com/) is an online platform for gathering, geo-tagging, attributing and discussing retro photos. A look at the history of humanity habitat.
@@ -57,3 +59,13 @@ administrators team.
   * PastVu 2.0 release - significant changes to geo data storage and handling, bringing underlying tools up to date.
 * 2022
   * [PastVu documentation project](https://docs.pastvu.com/en/) was created
+
+## Team
+
+<MainTeam></MainTeam>
+
+and [many contributors](https://github.com/PastVu/pastvu/graphs/contributors).
+
+### Acknowledgments
+
+<AlumniTeam></AlumniTeam>

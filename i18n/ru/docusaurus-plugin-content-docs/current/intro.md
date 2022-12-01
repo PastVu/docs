@@ -4,6 +4,8 @@ slug: /about
 sidebar_position: 1
 ---
 
+import {MainTeam, AlumniTeam} from '@site/src/components/Teams';
+
 # О проекте
 
 [PastVu](https://pastvu.com/) - проект по сбору свидетельств прошлого в фотографиях, взгляд на историю среды обитания человечества.
@@ -55,3 +57,13 @@ sidebar_position: 1
   * PastVu 2.0 - значительные изменения в работе с геоданными, обновление зависимостей до текущих версий и связанного функционала.
 * 2022
   * Запущен [проект документации PastVu](https://docs.pastvu.com/)
+
+## Команда
+
+<MainTeam></MainTeam>
+
+и [многие другие](https://github.com/PastVu/pastvu/graphs/contributors).
+
+### Благодарности
+
+<AlumniTeam></AlumniTeam>

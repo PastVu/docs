@@ -6,7 +6,6 @@ import Translate, {translate} from '@docusaurus/Translate';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
   link: string;
   linkText: string;
@@ -48,7 +47,7 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({
     index, title, description, link, linkText,
-}) {
+}): JSX.Element {
     return (
         <div className={clsx('col col--4 ', styles.card, styles[`card-${index}`])}>
             <div className={styles['card-inner']}>
