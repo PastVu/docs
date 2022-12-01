@@ -44,13 +44,6 @@ export function MainTeam (): JSX.Element {
             >
                 <Translate id="person.dema501.desc">System administration.</Translate>
             </Person>
-        </div>
-    )
-}
-
-export function CollabTeam (): JSX.Element {
-    return (
-        <div>
             <Person
                 name={translate({ id: 'person.aeifn.name', message: "Egor Kuzmichev"})}
                 avatar="img/people/kuzmichev.jpg"

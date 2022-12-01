@@ -4,7 +4,7 @@ slug: /about
 sidebar_position: 1
 ---
 
-import {MainTeam, CollabTeam, AlumniTeam} from '@site/src/components/Teams';
+import {MainTeam, AlumniTeam} from '@site/src/components/Teams';
 
 # Introduction
 
@@ -63,10 +63,6 @@ administrators team.
 ## Team
 
 <MainTeam></MainTeam>
-
-### Project Collaborators
-
-<CollabTeam></CollabTeam>
 
 and [many contributors](https://github.com/PastVu/pastvu/graphs/contributors).
 

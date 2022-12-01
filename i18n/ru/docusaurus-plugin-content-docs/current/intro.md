@@ -4,7 +4,7 @@ slug: /about
 sidebar_position: 1
 ---
 
-import {MainTeam, CollabTeam, AlumniTeam} from '@site/src/components/Teams';
+import {MainTeam, AlumniTeam} from '@site/src/components/Teams';
 
 # О проекте
 
@@ -61,10 +61,6 @@ import {MainTeam, CollabTeam, AlumniTeam} from '@site/src/components/Teams';
 ## Команда
 
 <MainTeam></MainTeam>
-
-### Участники проекта
-
-<CollabTeam></CollabTeam>
 
 и [многие другие](https://github.com/PastVu/pastvu/graphs/contributors).
 
