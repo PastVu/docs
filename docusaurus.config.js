@@ -45,6 +45,10 @@ const config = {
             to: '/rules',
             from: '/ru/rules',
           },
+          {
+            to: '/about',
+            from: '/ru/about',
+          },
         ],
       }
     ],
