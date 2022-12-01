@@ -32,9 +32,7 @@ docker compose run --rm --no-deps app npm install
 docker compose up
 ```
 
-Navigate to http://localhost:3000 and login with the default user `admin`/`admin`.
-
-Mailcatcher web interface is listening on http://localhost:1080 to view emails which app has sent out.
+Then navigate to `http://localhost:3000` and login with the default user `admin`/`admin`.
 
 Data store and Mongo database are using persistent storage (located on volumes), so you can re-create containers without losing the data. If you change code related to server side operation, you will need to restart containers after change to take effect. If you need to delete volumes, execute `docker compose down -v`.
 
@@ -54,8 +52,12 @@ Running `docker compose up` starts all service instances according to
 
 It's not strictly necessary to start all of them locally, only `app` is
 required, which can be started with databases using `docker compose up app`,
-but if you want to work with images make sure to start corresponding services
+but if you want to work with images make sure you started corresponding services
 as well.
+
+#### Email notifications
+
+Mailcatcher web interface is listening on `http://localhost:1080`, which can be used to view emails which app has sent out.
 
 ### Configuring
 
