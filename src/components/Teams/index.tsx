@@ -17,6 +17,7 @@ export function MainTeam (): JSX.Element {
                 name={translate({ id: 'person.klimashkin.name', message: "Pavel Klimashkin"})}
                 avatar="img/people/klimashkin.jpg"
                 pastvu="klimashkin"
+                github="klimashkin"
             >
                 <Translate id="person.klimashkin.desc">Project's architect, platform creator.</Translate>
             </Person>
