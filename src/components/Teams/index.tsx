@@ -26,6 +26,7 @@ export function MainTeam (): JSX.Element {
                 name={translate({ id: 'person.abdulla_hasan.name', message: "Anvar Paganini"})}
                 avatar="img/people/abdulla_hasan.png"
                 pastvu="abdulla_hasan"
+                github="anvaruk"
             >
                 <Translate id="person.abdulla_hasan.desc">Infrastructure, client relations.</Translate>
             </Person>
@@ -34,6 +35,7 @@ export function MainTeam (): JSX.Element {
                 name={translate({ id: 'person._p_k.name', message: "Paul K."})}
                 avatar="img/people/paul.png"
                 pastvu="_p_k"
+                github="paul-k-pastvu"
             >
                 <Translate id="person._p_k.desc">Community relations, issues management, UX analysis.</Translate>
             </Person>
