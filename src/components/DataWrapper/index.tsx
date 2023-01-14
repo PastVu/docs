@@ -42,7 +42,7 @@ export function DataWrapperChart ({
     const darkSuffix = colorMode === 'dark' ? '?dark=true' : '';
     return (
         <p className={styles.DataWrapperChart}>
-            <iframe title={title} aria-label={`${title} chart`} id={`datawrapper-chart-${chartId}`} src={`https://datawrapper.dwcdn.net/${chartId}/${darkSuffix}`} scrolling="no" frameBorder="0" width="600" height="420" data-external="1"></iframe>
+            <iframe title={title} aria-label={`${title} chart`} id={`datawrapper-chart-${chartId}`} src={`https://datawrapper.dwcdn.net/${chartId}/${darkSuffix}`} scrolling="no" frameBorder="0" width="100%" height="420" data-external="1"></iframe>
         </p>
     )
 }
