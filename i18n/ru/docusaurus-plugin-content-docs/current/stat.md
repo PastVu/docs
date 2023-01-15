@@ -12,25 +12,25 @@ import {DataWrapperChart} from '@site/src/components/DataWrapper';
 
 ## Загрузки
 
-<DataWrapperChart title="Photos Uploads" chartId="VlujH" />
+<DataWrapperChart title="Загружено фото" chartId="0f8ip" />
 
-<DataWrapperChart title="Paintings Uploads" chartId="IFA49" />
+<DataWrapperChart title="Загружено картин" chartId="0JzxP" />
 
-<DataWrapperChart title="Total Uploads" chartId="j7vds" />
+<DataWrapperChart title="Общее количество загрузок" chartId="4GJXU" />
 
 ## Комментарии
 
-<DataWrapperChart title="News Comments" chartId="1Zy0k" />
+<DataWrapperChart title="Комментарии к новостям" chartId="lDNIH" />
 
-<DataWrapperChart title="Images Comments" chartId="xUpS6" />
+<DataWrapperChart title="Комментарии к изображениям" chartId="bXe1J" />
 
-<DataWrapperChart title="Total Comments" chartId="tzXIK" />
+<DataWrapperChart title="Общее количество комментариев" chartId="oPzuU" />
 
 ## Пользователи
 
-<DataWrapperChart title="New Users" chartId="7CQIV" />
+<DataWrapperChart title="Новые пользователи" chartId="Xnlvl" />
 
-<DataWrapperChart title="Users Activity" chartId="yK3ON" />
+<DataWrapperChart title="Активность пользователей" chartId="lDZIR" />
 
-<DataWrapperChart title="Total Users" chartId="XUhbS" />
+<DataWrapperChart title="Общее количество пользователей" chartId="2YVg9" />
 

@@ -2,6 +2,7 @@ import React, {type ReactNode} from 'react';
 import styles from './styles.module.css';
 import {useColorMode} from '@docusaurus/theme-common';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import {translate} from '@docusaurus/Translate';
 
 type DataWrapperChartProps = {
   title: string;
@@ -40,9 +41,10 @@ export function DataWrapperChart ({
 }: DataWrapperChartProps): JSX.Element {
     const {colorMode} = useColorMode();
     const darkSuffix = colorMode === 'dark' ? '?dark=true' : '';
+    const areaLabel = translate({ id: 'datawrapper.iframe.label', message: "{title} chart"}, {title: title});
     return (
         <p className={styles.DataWrapperChart}>
-            <iframe title={title} aria-label={`${title} chart`} id={`datawrapper-chart-${chartId}`} src={`https://datawrapper.dwcdn.net/${chartId}/${darkSuffix}`} scrolling="no" frameBorder="0" width="100%" height="420" data-external="1"></iframe>
+            <iframe title={title} aria-label={areaLabel} id={`datawrapper-chart-${chartId}`} src={`https://datawrapper.dwcdn.net/${chartId}/${darkSuffix}`} scrolling="no" frameBorder="0" width="100%" height="420" data-external="1"></iframe>
         </p>
     )
 }
