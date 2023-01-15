@@ -342,5 +342,8 @@
   },
   "person.duche.desc": {
     "message": "Producer of the project 2009 - 2018."
+  },
+  "datawrapper.iframe.label": {
+    "message": "{title} chart"
   }
 }

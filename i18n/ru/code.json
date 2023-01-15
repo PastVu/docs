@@ -342,5 +342,8 @@
   },
   "person.duche.desc": {
     "message": "Продюсер проекта в 2009 – 2018 годах."
+  },
+  "datawrapper.iframe.label": {
+    "message": "График: {title}"
   }
 }
