@@ -83,6 +83,21 @@ to the logic:
 - Write logs of level `ERROR` and above to `errors.log`
 - Write Express logs of level `ERROR` and above to `http-errors.log`
 
+### Node updates
+
+When node version requirement is changed, you application run enrionment needs to be updated. To do
+that, rebuild `pastvu-node` image and install dependencies, then start
+application as normal.
+
+```bash
+# Build and tag pastvu_node using current node version requirements.
+docker compose build
+# Install node modules
+docker compose run --rm --no-deps app npm install
+# Start the application
+docker compose up
+```
+
 ## Coding style
 
 Coding style is verified by eslint and stylelint. You can trigger checks as
