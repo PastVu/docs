@@ -12,7 +12,7 @@
     "description": "The generated-index page title for category Development in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.Development.link.generated-index.description": {
-    "message": "Эта документация предназначена для разработчиков. Мы рады всем, кто готов помочь нам в развитии PastVu.",
+    "message": "Документация для разработчиков. Мы рады всем, кто готов помочь нам в развитии PastVu.",
     "description": "The generated-index page description for category Development in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.Contributing": {
