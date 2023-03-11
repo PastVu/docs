@@ -18,5 +18,17 @@
   "sidebar.mainSidebar.category.Contributing": {
     "message": "Contributing",
     "description": "The label for category Contributing in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.User Guides": {
+    "message": "User Guides",
+    "description": "The label for category User Guides in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.User Guides.link.generated-index.title": {
+    "message": "User Guides",
+    "description": "The generated-index page title for category User Guides in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.User Guides.link.generated-index.description": {
+    "message": "Documentation for users. Learn about features of PastVu and find answers to your questions.",
+    "description": "The generated-index page description for category User Guides in sidebar mainSidebar"
   }
 }

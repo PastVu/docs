@@ -18,5 +18,17 @@
   "sidebar.mainSidebar.category.Contributing": {
     "message": "Принять участие",
     "description": "The label for category Contributing in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.User Guides": {
+    "message": "Пользователю",
+    "description": "The label for category User Guides in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.User Guides.link.generated-index.title": {
+    "message": "В помощь пользователю",
+    "description": "The generated-index page title for category User Guides in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.User Guides.link.generated-index.description": {
+    "message": "Страницы документации для пользователей. Узнайте о возможностях PastVu и найдите ответы на вопросы.",
+    "description": "The generated-index page description for category User Guides in sidebar mainSidebar"
   }
 }
