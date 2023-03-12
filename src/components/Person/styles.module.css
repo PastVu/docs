@@ -24,9 +24,9 @@ html[data-theme="dark"] .githubProfile:before {
 }
 
 .pastvuProfile:before {
-    background: center / contain url('/img/logob.svg') no-repeat;
+    background: center / contain url("/img/logob.svg") no-repeat;
 }
 
 html[data-theme="dark"] .pastvuProfile:before {
-    background: center / contain url('/img/logow.svg') no-repeat;
+    background: center / contain url("/img/logow.svg") no-repeat;
 }

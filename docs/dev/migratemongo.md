@@ -8,7 +8,7 @@ tags:
 
 # Database Migration
 
-We are using [`migrate-mongo`](https://github.com/seppevs/migrate-mongo) database migration tool. Its CLI commands have npm script alises for convenience of running in docker environment:
+We are using [`migrate-mongo`](https://github.com/seppevs/migrate-mongo) database migration tool. Its CLI commands have npm script aliases for convenience of running in docker environment:
 
 * `migrate:create` - alias for `migrate-mongo create`
 * `migrate:status` - alias for `migrate-mongo status`

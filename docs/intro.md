@@ -35,10 +35,10 @@ administrators team.
   * [PastVu site and its key functionality](https://pastvu.com/news/82)
   * [First crowdfunding round](https://pastvu.com/news/86)
   * [Introduced notifications and subscriptions](https://pastvu.com/news/89)
-  * [Multi-regions support](https://pastvu.com/news/97) - inviting volounteers to join the team of reginal moderators.
+  * [Multi-regions support](https://pastvu.com/news/97) - inviting volunteers to join the team of reginal moderators.
   * [Second crowdfunding round](https://pastvu.com/news/105)
 * 2014
-  * [Comments functionality improvements](https://pastvu.com/news/110) - more conrol for moderators and logging.
+  * [Comments functionality improvements](https://pastvu.com/news/110) - more control for moderators and logging.
   * [Configurable watermarks](https://pastvu.com/news/120)
 * 2015
   * [Photo changes history](https://pastvu.com/news/123) - log of all photo attributes modifications.
@@ -53,7 +53,7 @@ administrators team.
   * [800k public photos](https://pastvu.com/news/135)
 * 2020
   * [Project becomes Open Source](https://pastvu.com/news/149) - project started receiving external contributions.
-  * Resilience improvement - migration to conteinerised hosting solution
+  * Resilience improvement - migration to containerised hosting solution
   * [Over 1 million public photos](https://pastvu.com/news/153)
 * 2021
   * PastVu 2.0 release - significant changes to geo data storage and handling, bringing underlying tools up to date.
