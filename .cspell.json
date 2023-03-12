@@ -1,0 +1,49 @@
+{
+  "version": "0.2",
+  "gitignoreRoot": ".",
+  "useGitignore": true,
+  "import": ["@cspell/dict-ru_ru/cspell-ext.json"],
+  "dictionaries": [
+    "en-gb",
+    "ru-ru",
+    "css",
+    "html",
+    "fonts",
+    "typescript",
+    "softwareTerms",
+    "companies",
+    "lorem-ipsum",
+    "project-words"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./.cspell-dict",
+      "noSuggest": true
+    }
+  ],
+  "ignorePaths": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "packages/docusaurus-theme-translations/locales",
+    "package.json",
+    "yarn.lock",
+    "project-words.txt",
+    "__snapshots__",
+    "website/src/data/users.tsx",
+    "website/src/data/tweets.tsx",
+    "website/docusaurus.config.localized.json",
+    "*.xyz",
+    "*.docx",
+    "versioned_docs",
+    "*.min.*",
+    "jest/vendor"
+  ],
+  "ignoreRegExpList": [
+      "Email",
+      "Urls",
+      "#[\\w-]*",
+      "url\\(\"(?:[^\\\"]+|\\.)*\"\\)",
+      "chartId=\"(?:[^\\\"]+|\\.)*\""
+  ]
+}
