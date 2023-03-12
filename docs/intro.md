@@ -8,7 +8,15 @@ import {MainTeam, AlumniTeam} from '@site/src/components/Teams';
 
 # Introduction
 
-[PastVu](https://pastvu.com/) is an online platform for gathering, geo-tagging, attributing and discussing retro photos. A look at the history of humanity habitat.
+[PastVu](https://pastvu.com/) is an online platform for gathering,
+geo-tagging, attributing and discussing retro images. A look at the history of
+humanity habitat.
+
+The platform's main goal is to make historical images more accessible to a
+wider audience and to promote cultural heritage preservation. The platform is
+free to use and allows users to explore historic images at location of
+interest, as well as contribute images and information to the
+archive.
 
 ## History
 

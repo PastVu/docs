@@ -4,6 +4,7 @@
   "link": {
     "type": "generated-index",
     "title": "Developer Resources",
-    "description": "This documentation is aimed at developers. We welcome any keen developer in helping us building PastVu."
+    "description": "Documentation for developers. We welcome any keen developer in helping us building PastVu.",
+    "slug": "/dev"
   }
 }
