@@ -14,7 +14,7 @@ For contributing to this documentation, see [Improve docs](./contributing/docs).
 
 We are grateful to the PastVu users community for adding photos and discussing
 them, helping to identify locations, improving information accuracy, taking
-resposibility by moderating uploaded content.
+responsibility by moderating uploaded content.
 
 The are many more ways one can get involved:
 
@@ -77,7 +77,7 @@ When PR is created, our integration systems will run automated tests to guard ag
 
 ### Licensing
 
-By contributing to PastVu, you agree that your contributions will be licensed under its [AGPLv3+](https://github.com/pastvu/pastvu/blob/master/COPYING) license. We are using simplified copyright header per Linux Foundation [guidelines](https://www.linuxfoundation.org/blog/blog/copyright-notices-in-open-source-software-projects) and single line license delcaration. The following header should be present in all code files (except third-party source code, e.g. libraries):
+By contributing to PastVu, you agree that your contributions will be licensed under its [AGPLv3+](https://github.com/pastvu/pastvu/blob/master/COPYING) license. We are using simplified copyright header per Linux Foundation [guidelines](https://www.linuxfoundation.org/blog/blog/copyright-notices-in-open-source-software-projects) and single line license declaration. The following header should be present in all code files (except third-party source code, e.g. libraries):
 
 ```js
 /**

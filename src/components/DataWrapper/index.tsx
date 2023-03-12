@@ -11,6 +11,7 @@ type DataWrapperChartProps = {
 
 if (ExecutionEnvironment.canUseEventListeners) {
     // iframe resize snippet https://developer.datawrapper.de/docs/responsive-iframe#constructing-a-responsive-embed-code
+    // cspell:ignore iframes
     window.addEventListener('message', function(event) {
         if (typeof event.data['datawrapper-height'] !== 'undefined') {
             var iframes = document.querySelectorAll('iframe');

@@ -57,7 +57,7 @@ The start command builds your website locally and serves it through a developmen
 
 ## i18n
 
-Docusarus is configured to support multiple locales. Currently Englsh and Russian languages are supported. English is the main language, documents in English are organised the standard way (as in single-language website), e.g. documents are located under the subroute `docs/` and pages are at subroute `src/pages/`.
+Docusaurus is configured to support multiple locales. Currently English and Russian languages are supported. English is the main language, documents in English are organised the standard way (as in single-language website), e.g. documents are located under the subdir `docs/` and pages are at subdir `src/pages/`.
 
 Russian translations are located at locale subdirs, for documents
 this will be `i18n/ru/docusaurus-plugin-content-docs/current` and for pages `i18n/ru/docusaurus-plugin-content-pages`.
@@ -113,7 +113,7 @@ Please follow commit messages format:
 `<scope> (<locale>): <subject>`
 
 
-`<locale>` is optional. `<scope>` reflects the area of chnage, e.g. `style`, `docs`, `pages`, `config`, etc. For example:
+`<locale>` is optional. `<scope>` reflects the area of change, e.g. `style`, `docs`, `pages`, `config`, etc. For example:
 
 ```
 docs en: Add information about multilanguage support

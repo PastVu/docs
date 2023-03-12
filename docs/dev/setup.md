@@ -71,7 +71,7 @@ It is important that `client.hostname` is matching hostname of machine where you
 
 ### Logs
 
-As we run node in docker enivronment, each service container has own logs that
+As we run node in docker environment, each service container has own logs that
 can be accessed using `docker logs <container name>` command. Aggregated logs
 output is also shown in terminal where `docker compose up` is executed.
 
@@ -85,7 +85,7 @@ to the logic:
 
 ### Node updates
 
-When node version requirement is changed, you application run enrionment needs to be updated. To do
+When node version requirement is changed, you application run environment needs to be updated. To do
 that, rebuild `pastvu-node` image and install dependencies, then start
 application as normal.
 
@@ -108,7 +108,7 @@ style issues can be fixed by adding `--fix` param to above commands.
 
 We are using [Jest](https://jestjs.io/) testing framework. Although, we are in
 early stages of adding tests for existing code. It is generally a good idea to
-supply your contribution along with tests where posible. To run tests locally,
+supply your contribution along with tests where possible. To run tests locally,
 execute `npm run jest`. If you need to supply any [CLI
 options](https://jestjs.io/docs/cli), call it as `npm run jest -- --verbose=true`.
 
@@ -146,9 +146,9 @@ For more information on syntax refer to `debug` package
 It is possible to debug application using Node.js inspector client when
 required. There are several [clients
 available](https://nodejs.org/en/docs/guides/debugging-getting-started/#inspector-clients),
-although most strightforward option is using Chrome DevTools. Open
+although most straightforward option is using Chrome DevTools. Open
 `chrome://inspect` in Chromium based browser and make sure you have
-`localhost:9229` configured at "Discover network taget". Now you need to start
+`localhost:9229` configured at "Discover network target". Now you need to start
 application with inspector agent enabled:
 ```
 docker compose run --rm -p 9229:9229 -p 3000:3000 app npm run inspect
@@ -156,7 +156,7 @@ docker compose run --rm -p 9229:9229 -p 3000:3000 app npm run inspect
 
 Under "Remote target" section in inspector tab you will see a new running instance that you can use for debugging.
 
-In the case when appication can't be started at all, you can use inspector with an
+In the case when application can't be started at all, you can use inspector with an
 option to break before user code starts:
 ```
 docker compose run --rm -p 9229:9229 -p 3000:3000 app npm run inspect-brk
@@ -169,5 +169,5 @@ run inspector client and control execution flow.
 
 * If you are using docker inside VM and accessing app from host OS (or any other scenario where web client host may differ from the host where you run docker), make sure that `client.hostname` in your `config/local.config.js` is matching domain name that client uses to access the app. This setting is used for cookies domain, so having it wrong will result in session being cleared on page refresh.
 
-* When you upgrade continers to newer image, you may experience an issue when any CSS requests in the app result in 500 error and layout is severley broken. This happens when container is not able to overwrite CSS files (they are generated alongside `.less` files at `public/style/` directory). To fix the issue run `npx grunt clean:publicCss` from project directory and then start application.
+* When you upgrade containers to newer image, you may experience an issue when any CSS requests in the app result in 500 error and layout is severely broken. This happens when container is not able to overwrite CSS files (they are generated alongside `.less` files at `public/style/` directory). To fix the issue run `npx grunt clean:publicCss` from project directory and then start application.
 
