@@ -8,12 +8,12 @@ sidebar_position: 1
 
 # Using the Map
 
-In PastVu, the map allows users to explore historical images and their
+PastVu webapp allows users to explore historical images and their
 corresponding locations on an interactive map. It makes possible to see where
 particular image took place and to allow users to discover new historical
 images and information.
 
-![PastVu Map](/img/docs/guides/map/map.png)
+![Map](/img/docs/guides/map/map.png)
 
 ### Navigation
 
@@ -26,16 +26,17 @@ You can point to the image marker to view a thumbnail popup of the
 corresponding historical image. Click on the thumbnail to open the the full
 image and read more information.
 
-"Home" button repositions the map to the home location, which can be
-configured in user settings.
+<div class="list-table">
 
-"My location" button positions the map by geolocation data available in
-the browser. On the first use, browser will ask permission to use this
-location data. If user denied use of geolocation data, the button will be
-inactive and non-functional.
+|    |   |
+|---:|---|
+| !["Home" button](/img/docs/guides/map/map_nav_home.png) | "Home" button repositions the map to the home location, which can be configured in user settings. |
+| !["My location" button](/img/docs/guides/map/map_nav_geo.png) | "My location" button positions the map by geolocation data available in the browser. On the first use, browser will ask permission to use this location data. If user denied use of geolocation data, the button will be inactive and non-functional. |
+
+</div>
 
 :::info
-Geolocation information is not stored in PastVu and used solely to
+Geolocation information about user is not stored in PastVu and used solely to
 reposition the map.
 :::
 
@@ -47,13 +48,26 @@ located to the left of address line in Chrome or Firefox for example).
 
 ### Controls
 
-At the top right you can control types of images to display, such as photos or
-paintings. You can also copy the map URL which will position the map exactly
-as you see when URL accessed. Also there is a control that enables opening of
-image page in a separate tab and map layer selector that are self-explanatory.
+In the top right-hand corner of the map there are several control elements:
 
-You can also use the time slider at the bottom of the page to narrow down the
-results by a specific time period.
+<div class="list-table">
+
+|    |   |
+|---:|---|
+| ![Image type selector](/img/docs/guides/map/map_controls_type.png) | these buttons allow you to change the type of images displayed (photos or pictures/paintings). |
+| ![Image opening method button](/img/docs/guides/map/map_controls_open.png) | if this button is active, clicking on the markers (thumbnails) on the map will open each new page with an image in separate tab. |
+| ![Map URL copy button](/img/docs/guides/map/map_controls_link.png) | this button can be used to copy URL to the current map position; accessing this URL will open the map exactly as you see it at that moment. |
+| ![Map layer selector](/img/docs/guides/map/map_embed_controls_layer.png) | drop-down menu to select the map layer to be displayed. The name of the current layer is displayed as a button title. |
+
+</div>
+
+At the bottom of the map there is a 'time slider' to help limit the number of
+image markers shown on the map, leaving only those that fall within a given
+time range.
+
+:::tip
+The colour scale on the 'time slider' also has meaning - these colours correspond to the colours of the markers on the map that relate to a particular time period.
+:::
 
 ## Embedded Map
 
@@ -62,10 +76,15 @@ on the Pastvu website, but with the added feature of highlighting the location
 of the image. This makes it easier for users to see where the photo was taken
 and get a better understanding of its context.
 
-![PastVu Embedded Map](/img/docs/guides/map/map_embedded.png)
+![Embedded Map](/img/docs/guides/map/map_embedded.png)
 
-"Copy coordinates" button allows to copy image coordinates in the format
-`Lat,Lng`. If image does not have coordinates, the button will be inactive.
+<div class="list-table">
+
+|   |   |
+|---|---|
+| ![Copy coordinates button](/img/docs/guides/map/map_embedded_copy.png) | "Copy coordinates" button allows to copy image coordinates in the format `Lat,Lng`. If image does not have coordinates, the button will be inactive. |
+
+</div>
 
 ### Edit mode
 
@@ -77,7 +96,7 @@ If image did not have coordinates, clicking on the map
 sets photo location pin and fills in coordinates field. Location pin can be
 moved to achieve required accuracy.
 
-![PastVu Image Edit Map](/img/docs/guides/map/map_edit.png)
+![Image Editing Map](/img/docs/guides/map/map_edit.png)
 
 It is also possible to paste coordinates to the field if they are known, this
 will position the map to required location and set a pin at new point.
