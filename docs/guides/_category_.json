@@ -1,0 +1,10 @@
+{
+  "label": "User Guides",
+  "position": 2.5,
+  "link": {
+    "type": "generated-index",
+    "title": "User Guides",
+    "description": "Documentation for users. Learn about features of PastVu and find answers to your questions.",
+    "slug": "/guides"
+  }
+}
