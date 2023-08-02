@@ -57,7 +57,7 @@ as well.
 
 #### Email notifications
 
-Mailcatcher web interface is listening on `http://localhost:1080`, which can be used to view emails which app has sent out.
+Mailpit web interface is listening on `http://localhost:1080`, which can be used to view emails which app has sent out.
 
 ### Configuring
 
