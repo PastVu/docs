@@ -10,7 +10,10 @@ sidebar_position: 3
 # PastVu API
 
 :::info
-To retrieve a photo, you need to add the contents of the `file` field from the API method response to the URL `https://pastvu.com/_p/d/`.
+To retrieve a photo, you need to add the contents of the `file` field from the API method response to the URL:
+* `https://pastvu.com/_p/d/` for standard size;
+* `https://pastvu.com/_p/a/` for original size;
+* `https://pastvu.com/_p/h/` for thumbnail size.
 :::
 
 The following methods are supported:
