@@ -72,7 +72,7 @@ In order to make document appear in the page sidebar, the file should be added a
 cp docs/dev/setup.md i18n/ru/docusaurus-plugin-content-docs/current/dev/setup.md
 ```
 
-:::caution
+:::warning
 We only copy .md and .mdx files, as React pages are translated through JSON translation files.
 :::
 
