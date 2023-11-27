@@ -49,11 +49,11 @@ Parameter | Mandatory | Type | Default | Description |
 --- | --- | --- | --- | --- |
 geo | ✓ | array [lat, lon] | coordinates |
 except| | int | | exclude `cid` photo from the output |
-distance| | int | 10000 | maximum distance in meters (<= 1000km) |
+distance| | int | 10000 | maximum distance in meters (\<= 1000km) |
 year | int | | lower limit of the year of the photo
 year2 | int | | upper limit of the year of the picture |
 type | string | `photo` or `painting` |
-limit | int | 30 | number of photos requested (<= 30) |
+limit | int | 30 | number of photos requested (\<= 30) |
 skip | int | | skip the specified number of photos from the beginning of the search result (for page output) |
 
 **Query example:**
