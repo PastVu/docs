@@ -118,6 +118,15 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image',
+        content: '/img/logo.png',
+      },
+    },
+  ],
 };
 
 module.exports = config;
