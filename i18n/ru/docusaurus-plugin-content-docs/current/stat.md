@@ -18,6 +18,8 @@ import {DataWrapperChart} from '@site/src/components/DataWrapper';
 
 <DataWrapperChart title="Общее количество загрузок" chartId="4GJXU" />
 
+<DataWrapperChart title="Фото по времени" chartId="qimhx" />
+
 ## Комментарии
 
 <DataWrapperChart title="Комментарии к новостям" chartId="lDNIH" />
