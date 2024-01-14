@@ -18,6 +18,8 @@ You can explore annual statics in the charts below. The current statistical info
 
 <DataWrapperChart title="Total Uploads" chartId="j7vds" />
 
+<DataWrapperChart title="Photos by Time" chartId="YxpSs" />
+
 ## Comments
 
 <DataWrapperChart title="News Comments" chartId="1Zy0k" />
