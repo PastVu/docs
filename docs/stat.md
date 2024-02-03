@@ -20,6 +20,8 @@ You can explore annual statics in the charts below. The current statistical info
 
 <DataWrapperChart title="Photos by Time" chartId="YxpSs" />
 
+<DataWrapperChart title="Photos by Year" chartId="mTEjk" />
+
 ## Comments
 
 <DataWrapperChart title="News Comments" chartId="1Zy0k" />
