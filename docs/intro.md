@@ -67,6 +67,10 @@ administrators team.
   * PastVu 2.0 release - significant changes to geo data storage and handling, bringing underlying tools up to date.
 * 2022
   * [PastVu documentation project](https://docs.pastvu.com/en/) was created
+* 2023
+  * [Informing users on current technical changes](https://pastvu.com/news/155) - changelog to keep users informed and get feedback.
+* 2024
+  * [Crowdfunding campaign for annual hosting cost](https://pastvu.com/news/157) - required amount was collected in less than 24 hours.
 
 ## Team
 
