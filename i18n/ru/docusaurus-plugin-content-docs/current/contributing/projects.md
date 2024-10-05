@@ -13,3 +13,4 @@ tags:
 - [retromap.ru](https://retromap.ru) показывает фотографии PastVu с привязкой к старинным картам.
 - [@PastvuBot](https://t.me/PastvuBot) Телеграм-бот, который отправляет исторические фотографии PastVu для запрашиваемого местоположения ([source code](https://github.com/ratmirslv/pastvu-bot))
 - [Godina](https://rastereo.github.io/godina) - угадай год по фотографии, игра использующая PastVu как один из источников изображений ([source code](https://github.com/rastereo/godina)).
+- [PastVu gem](https://github.com/projecteurlumiere/pastvu) - библиотека на языке Ruby для удобного взаимодействия с PastVu API.

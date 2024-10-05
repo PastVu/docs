@@ -18,4 +18,4 @@ Most of the listed projects are not localised, consider reaching authors of open
 - [retromap.ru](https://retromap.ru) displays PastVu photos on old maps.
 - [@PastvuBot](https://t.me/PastvuBot) is Telegram bot that sends PastVu historical photos for requested location ([source code](https://github.com/ratmirslv/pastvu-bot)).
 - [Godina](https://rastereo.github.io/godina) - guess year by photo game is using PastVu as one of the picture sources ([source code](https://github.com/rastereo/godina)).
-
+- [PastVu gem](https://github.com/projecteurlumiere/pastvu) is a Ruby wrapper for PastVu API. It allows convenient interaction with the API in Ruby code.
