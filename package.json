@@ -1,6 +1,6 @@
 {
   "name": "pastvudocs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -17,10 +17,10 @@
     "lint:spelling": "cspell \"**\" --no-progress"
   },
   "dependencies": {
-    "@docusaurus/core": "3.0.0",
-    "@docusaurus/plugin-client-redirects": "3.0.0",
-    "@docusaurus/plugin-google-gtag": "3.0.0",
-    "@docusaurus/preset-classic": "3.0.0",
+    "@docusaurus/core": "3.5.2",
+    "@docusaurus/plugin-client-redirects": "3.5.2",
+    "@docusaurus/plugin-google-gtag": "3.5.2",
+    "@docusaurus/preset-classic": "3.5.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^1.2.1",
     "docusaurus-plugin-sass": "^0.2.5",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@cspell/dict-ru_ru": "^2.0.5",
     "@docusaurus/module-type-aliases": "^3.0.0",
-    "@docusaurus/tsconfig": "3.0.0",
+    "@docusaurus/tsconfig": "^3.0.0",
     "cspell": "^6.29.0",
     "typescript": "^5.2.2"
   },
