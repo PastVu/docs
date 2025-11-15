@@ -54,34 +54,29 @@
 }
 
 .rules {
-    ol {
-        counter-reset: item;
+    ul {
         margin-left: 0;
+        list-style-type: none;
 
         > li {
             display: block;
             text-align: justify;
-            counter-increment: item;
             font-weight: normal;
 
-            &::before {
-                content: counters(item, ".") ". ";
-            }
-
-            > ol {
+            > ul {
                 padding-left: 18px;
-                > li > ol {
+                > li > ul {
                     padding-left: 38px;
                 }
             }
         }
 
-        ol > li {
+        ul > li {
             padding: 6px 0;
         }
 
     }
-    > ol {
+    > ul {
         padding: 0;
 
         > li {
