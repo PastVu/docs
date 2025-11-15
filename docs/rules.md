@@ -51,11 +51,13 @@ slug: /rules
       - 3.1.1\. Low-quality images, when it is not clear what is shown in the picture
       - 3.1.2\. Family photos, portraits of people and animals without clear attribution to the location (except for genre scenes that convey the spirit of the era)
       - 3.1.3\. Which dimensions are less than 700 pixels along the larger side (margins, if any, do not count).
-      - 3.1.4\. With large size (more than 10% of the image area) copyrights and non-original captions,
+      - 3.1.4\. With large size (more than 10% of the image area) copyrights and non-original captions (also see section 9).
       - 3.1.5\. Photographs taken after the year 2000 and other images created after 1980;
       - 3.1.6\. Over 50 megabytes in size;
-      - 3.1.7\. Small size/low quality, enlarged in a graphic editor to 700 pixels or more;
+      - 3.1.7\. Small size/low quality, enlarged in a graphic editor to 700 pixels or more, as well as those obtained via screen capture (screenshot), this also applies to video;
       - 3.1.8\. Images of museum and exhibition exhibits (paintings, sculptures, models, machines, engineering systems, mechanisms, automotive and motor vehicles and similar objects);
+      - 3.1.9\. "Enhanced" using neural networks, AI, and other software tools and services (including digital colourisation); in other words, removing dust and reducing "digital noise" is permissible, but adding information that is not present in the original image is not; this point does not apply to cases of removing extraneous inscriptions (see section 9.2);
+      - 3.1.10\. Containing large margins or passe-partouts frame (more than 10% of the image area, see also section 3.7);
    - 3.2\. Images without coordinates are accepted into the "Where is it?" section if the user specifies the minimum information about the shooting point:
       - 3.2.1\. For images of urban environment - country of shooting
       - 3.2.2\. For images of separate architectural objects, buildings, landscapes, non-architectural objects - country, region, nearest settlement.
@@ -63,6 +65,7 @@ slug: /rules
    - 3.4\. "Joining" of photos taken from different points and/or directions will be rejected. "Joining" of photos taken at different times will also be rejected.
    - 3.5\. Pictures in which the faces of the persons depicted are blurred, "cut out", replaced by ovals or otherwise altered will be considered deliberately defaced and not eligible for publication on the site. If the user does not want to show his/her face, faces of his/her relatives or acquaintances - he/she should refrain from publishing such photos.
    - 3.6\. Users uploading images are not expected to intentionally "age" images or remove any details that clearly identify the image as post-2000. Such actions cannot be called anything other than intentional falsification. In case such an act is detected, the falsified images will be deleted immediately.
+   - 3.7\. If the original image contains wide margins or a passe-partouts frame (more than 10% of the total image area), such images must be cropped to the edges of the photograph/painting/drawing itself (or to 700px in width if the photograph/painting/drawing itself is smaller than this size). Sometimes the design of the passe-partouts frame of a historical photograph is important for attribution — such cases should be clearly stated in the description of the image, but the final decision in each case is made by the moderator. Digitised postcards should be uploaded in their original form, preserving the margins that are present on the original, cropping the image to the physical boundaries of the object.
 
 - 4\. Text content
    - 4.1\. Text posted in comments to the images and in the Forum (hereinafter "Messages") serve to discuss the images and other information posted by users on the site.
@@ -101,9 +104,13 @@ slug: /rules
        - \- are known;
        - \- are not indecent;
        - \- do not contain obvious errors and do not contradict the historical truth.
+   - 5.12\. Titles should not contain abbreviations other than those permitted in addresses (e.g., "str.", "cres.", "av.", "sq." etc.), initials, and the similar.
 
-- 6\. Indication of sources
+- 6\. Specifying authorship and sources
    - 6.1\. The site administration is very interested in the fact that users indicate the source from which the images were borrowed accurately in the appropriate field. In the case where the source is not indicated, or indicated knowingly falsely, and the legal owner of the site presents claims, paragraph 1.16 of these Rules comes into force. A dishonest attitude towards the indication of the source of the image(s) may lead to civil or criminal liability in accordance with the current legislation.
+   - 6.2\. When providing a web link to the source, such a link should lead to the page of the website or the post on the forum or social network containing the published image, and not to the image itself, the album or the main page of the website[^1].
+   - 6.3\. For still images from digitised video, the source must be indicated by a link to the digitisation from which the storyboard was taken (publication on a video hosting site, page of another website, peer-to-peer networks, DVB) and/or an indication of the format of the source medium (DVD, BluRay, VHS), etc.
+   - 6.4\. For storyboards for films and documentaries, the director should be listed first as the author, followed by the cinematographer.
 
 - 7\. Requirements for nicknames and profile pictures (avatars)
    - 7.1\. The user has the right to register under his/her real name or choose a nickname or pseudonym which he/she will use for communication.
@@ -124,4 +131,10 @@ slug: /rules
    - 8.9\. All of these manipulations can be mastered in one evening, and the end result is that you can improve your images not only for PastVu, but also just for own use!
    - 8.10\. As a word of caution: don't get carried away with improvement, remember: the best is the enemy of the good! One more thing: this paragraph contains RECOMMENDATIONS, is it not binding.
 
+- 9\. Policy regarding third-party watermarks and logos
+   - 9.1\. The website does not welcome the removal by users of watermarks and logos of authors and copyright holders of uploaded images, as well as cultural institutions (libraries, museums, archives). This applies to cases where such a mark looks acceptable, respectful to the historical image, and does not spoil it. Logos and watermarks that are located directly in the centre of the image, or multiple watermarks that are arranged in a grid or stripes across the entire image area, are unacceptable.
+   - 9.2\. The site does not accept images containing proprietary logos of any kind (names of online auctions, websites, blogs, names of online sellers, etc.) that are not related to the above. However, careful ‘seamless’ removal of such extraneous inscriptions will not cause complaints from moderators.
+   - 9.3\. The special case is website watermarks where photos are published by the authors themselves (owners of personal and family archives). This is decided individually by moderators on a case-by-case basis. In general, it is advisable not to upload images containing a watermark or logo that is not clearly identifiable as a mark of the author, copyright holder, or cultural institution. 
 </div>
+
+[^1]: See discussions [/p/2332303?hl=comment-3313454](https://pastvu.com/p/2332303?hl=comment-3313454), [/p/2332300?hl=comment-3313456](https://pastvu.com/p/2332300?hl=comment-3313456).
