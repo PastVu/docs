@@ -53,12 +53,12 @@ _Revised on 15 November 2025, see https://pastvu.com/news/160_
       - 3.1.1\. Low-quality images, when it is not clear what is shown in the picture
       - 3.1.2\. Family photos, portraits of people and animals without clear attribution to the location (except for genre scenes that convey the spirit of the era)
       - 3.1.3\. Which dimensions are less than 700 pixels along the larger side (margins, if any, do not count).
-      - 3.1.4\. With large size (more than 10% of the image area) copyrights and non-original captions (also see section 9).
+      - 3.1.4\. With large size (more than 10% of the image area) copyrights and non-original captions (also see section 8).
       - 3.1.5\. Photographs taken after the year 2000 and other images created after 1980;
       - 3.1.6\. Over 50 megabytes in size;
       - 3.1.7\. Small size or low quality, enlarged in a graphic editor to 700 pixels or more, as well as those obtained via screen capture (screenshot), this also applies to video;
       - 3.1.8\. Images of museum and exhibition exhibits (paintings, sculptures, models, machines, engineering systems, mechanisms, automotive and motor vehicles and similar objects);
-      - 3.1.9\. "Enhanced" using neural networks, AI, and other software tools and services (including digital colourisation); in other words, removing dust and reducing "digital noise" is permissible, but adding information that is not present in the original image is not; this point does not apply to cases of removing extraneous inscriptions (see section 9.2);
+      - 3.1.9\. "Enhanced" using neural networks, AI, and other software tools and services (including digital colourisation); in other words, removing dust and reducing "digital noise" is permissible, but adding information that is not present in the original image is not; this point does not apply to cases of removing extraneous inscriptions (see section 8.2);
       - 3.1.10\. Containing large margins or passe-partouts frame (more than 10% of the image area, see also section 3.7);
    - 3.2\. Images without coordinates are accepted into the "Where is it?" section if the user specifies the minimum information about the shooting point:
       - 3.2.1\. For images of urban environment - country of shooting
