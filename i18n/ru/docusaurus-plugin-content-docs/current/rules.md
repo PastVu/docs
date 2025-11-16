@@ -5,7 +5,7 @@ slug: /rules
 
 # Правила
 
-_Редакция от 15.11.2025, см. https://pastvu.com/news/160_
+_Редакция от 17.11.2025, см. https://pastvu.com/news/160_
 
 <div className="rules">
 

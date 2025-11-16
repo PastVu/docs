@@ -5,7 +5,7 @@ slug: /rules
 
 # Rules
 
-_Revised on 15 November 2025, see https://pastvu.com/news/160_
+_Revised on 17 November 2025, see https://pastvu.com/news/160_
 
 <div className="rules">
 
