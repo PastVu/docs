@@ -5,6 +5,8 @@ slug: /rules
 
 # Rules
 
+_Revised on 15 November 2025, see https://pastvu.com/news/160_
+
 <div className="rules">
 
 - 1\. General provisions
@@ -54,7 +56,7 @@ slug: /rules
       - 3.1.4\. With large size (more than 10% of the image area) copyrights and non-original captions (also see section 9).
       - 3.1.5\. Photographs taken after the year 2000 and other images created after 1980;
       - 3.1.6\. Over 50 megabytes in size;
-      - 3.1.7\. Small size/low quality, enlarged in a graphic editor to 700 pixels or more, as well as those obtained via screen capture (screenshot), this also applies to video;
+      - 3.1.7\. Small size or low quality, enlarged in a graphic editor to 700 pixels or more, as well as those obtained via screen capture (screenshot), this also applies to video;
       - 3.1.8\. Images of museum and exhibition exhibits (paintings, sculptures, models, machines, engineering systems, mechanisms, automotive and motor vehicles and similar objects);
       - 3.1.9\. "Enhanced" using neural networks, AI, and other software tools and services (including digital colourisation); in other words, removing dust and reducing "digital noise" is permissible, but adding information that is not present in the original image is not; this point does not apply to cases of removing extraneous inscriptions (see section 9.2);
       - 3.1.10\. Containing large margins or passe-partouts frame (more than 10% of the image area, see also section 3.7);
@@ -96,8 +98,8 @@ slug: /rules
    - 5.4\. The names are written according to the rules of modern orthography.
    - 5.5\. The title of the image is the title of the page, no full stop is needed at the end of the title.
    - 5.6\. The title of the image should preferably be brief, no more than 120 characters. It is logical to place long descriptions and lists of the objects shown in the image in the description field.
-   - 5.7\. Date of photography is not included in the title. The years of photography are indicated in the appropriate field, more precise date can be specified in the description to the image
-   - 5.8\. Regions defined automatically by the system are not indicated in the name of the image. The city name is indicated if it was different at the time of shooting than it is now.
+   - 5.7\. The date of the photograph is not included in the image title. The year the photograph was taken or the year of the event depicted in the image is indicated in the corresponding field. A more precise date for the image may be specified in the description of the photograph, which may also indicate the year the image was created (if it differs from the period depicted).
+   - 5.8\. The image title should not repeat the names of regions automatically determined by the system (down to the city level). It is acceptable to indicate the name of the city if it was different at the time of shooting than it is now. Names of regions below the city level (parks, memorials, estates, etc.) may be shown in the image title.
    - 5.9\. Names like: "My backyard", "I am near my house" are unacceptable. Also unacceptable are vulgar place names such as "Old Smoke", "The Valleys", etc. Such informal names, if desired, should be mentioned in the description.
    - 5.10\. Names of streets and other objects should be given as of the date of image. It is permissible to give the current name in parentheses if it differs from the previous one. In cases where the year of the photo is unknown, and the name was changed within the supposed period, write both names, e.g. for a photo taken between 1930 and 1940: College Road (Eton College Road).
    - 5.11\. Do not disregard author titles, of course, if they
@@ -108,7 +110,7 @@ slug: /rules
 
 - 6\. Specifying authorship and sources
    - 6.1\. The site administration is very interested in the fact that users indicate the source from which the images were borrowed accurately in the appropriate field. In the case where the source is not indicated, or indicated knowingly falsely, and the legal owner of the site presents claims, paragraph 1.16 of these Rules comes into force. A dishonest attitude towards the indication of the source of the image(s) may lead to civil or criminal liability in accordance with the current legislation.
-   - 6.2\. When providing a web link to the source, such a link should lead to the page of the website or the post on the forum or social network containing the published image, and not to the image itself, the album or the main page of the website[^1].
+   - 6.2\. When providing a web link to the source, such a link should lead to the page of the website or post on the forum or social network containing the published image, and not to the image itself, album or main page of the website[^1]. For websites that do not have links to the page containing the image (all photos are viewed on the same page with the same address), it is acceptable to provide two links: one to the website page and one to the image itself.
    - 6.3\. For still images from digitised video, the source must be indicated by a link to the digitisation from which the storyboard was taken (publication on a video hosting site, page of another website, peer-to-peer networks, DVB) and/or an indication of the format of the source medium (DVD, BluRay, VHS), etc.
    - 6.4\. For storyboards for films and documentaries, the director should be listed first as the author, followed by the cinematographer.
 
@@ -119,22 +121,10 @@ slug: /rules
       - 7.2.2\. Be similar to the nicknames of administrators and moderators to the extent that other users would be misled.
    - 7.3\. Usernames must not contain obscene (indecent) images that offend public morals and are contrary to generally accepted standards of morality. In case of failure to comply with these requirements, the site administration reserves the right to block the user's account before making changes to the nickname and/or the username.
 
-- 8\. Recommendations on editing uploaded photos (not obligatory, but desirable)
-   - 8.1\. Before uploading any image, it would be a good idea to pass it through a graphic editor (Adobe Photoshop, GIMP, XnView, etc.). In a matter of seconds, the image can be significantly improved by simple actions!
-   - 8.2\. For example, if there are brown spots in a black-and-white photo, they can be easily removed by desaturation.
-   - 8.3\. If the houses in the image "lean" to the right or to the left, it would be useful to align the image vertically.
-   - 8.4\. You can improve "cloudy", faded images by adding contrast and saturation.
-   - 8.5\. Colour photos with distorted colours can be corrected with AutoTone and AutoColor.
-   - 8.6\. If an image is clearly flipped, it can be corrected using the "flip horizontal" function.
-   - 8.7\. You can also raise the sharpness slightly.
-   - 8.8\. Pre-processing is welcome if the original b/w photo is actually green-white, yellow-white or red-white.
-   - 8.9\. All of these manipulations can be mastered in one evening, and the end result is that you can improve your images not only for PastVu, but also just for own use!
-   - 8.10\. As a word of caution: don't get carried away with improvement, remember: the best is the enemy of the good! One more thing: this paragraph contains RECOMMENDATIONS, is it not binding.
-
-- 9\. Policy regarding third-party watermarks and logos
-   - 9.1\. The website does not welcome the removal by users of watermarks and logos of authors and copyright holders of uploaded images, as well as cultural institutions (libraries, museums, archives). This applies to cases where such a mark looks acceptable, respectful to the historical image, and does not spoil it. Logos and watermarks that are located directly in the centre of the image, or multiple watermarks that are arranged in a grid or stripes across the entire image area, are unacceptable.
-   - 9.2\. The site does not accept images containing proprietary logos of any kind (names of online auctions, websites, blogs, names of online sellers, etc.) that are not related to the above. However, careful ‘seamless’ removal of such extraneous inscriptions will not cause complaints from moderators.
-   - 9.3\. The special case is website watermarks where photos are published by the authors themselves (owners of personal and family archives). This is decided individually by moderators on a case-by-case basis. In general, it is advisable not to upload images containing a watermark or logo that is not clearly identifiable as a mark of the author, copyright holder, or cultural institution. 
+- 8\. Policy regarding third-party watermarks and logos
+   - 8.1\. The website does not welcome the removal by users of watermarks and logos of authors and copyright holders of uploaded images, as well as cultural institutions (libraries, museums, archives). This applies to cases where such a mark looks acceptable, respectful to the historical image, and does not spoil it. Logos and watermarks that are located directly in the centre of the image, or multiple watermarks that are arranged in a grid or stripes across the entire image area, are unacceptable.
+   - 8.2\. The site does not accept images containing proprietary logos of any kind (names of online auctions, websites, blogs, names of online sellers, etc.) that are not related to the above. However, seamless removal of such extraneous inscriptions is permitted.
+   - 8.3\. The special case is website watermarks where photos are published by the authors themselves (owners of personal and family archives). This is decided individually by moderators on a case-by-case basis. In general, it is advisable not to upload images containing a watermark or logo that is not clearly identifiable as a mark of the author, copyright holder, or cultural institution. 
 </div>
 
-[^1]: See discussions [/p/2332303?hl=comment-3313454](https://pastvu.com/p/2332303?hl=comment-3313454), [/p/2332300?hl=comment-3313456](https://pastvu.com/p/2332300?hl=comment-3313456).
+[^1]: See discussions [/p/2332303?hl=comment-3313454](https://pastvu.com/p/2332303?hl=comment-3313454) and [/p/2332300?hl=comment-3313456](https://pastvu.com/p/2332300?hl=comment-3313456).
