@@ -102,11 +102,9 @@ _Revised on 15 November 2025, see https://pastvu.com/news/160_
    - 5.8\. The image title should not repeat the names of regions automatically determined by the system (down to the city level). It is acceptable to indicate the name of the city if it was different at the time of shooting than it is now. Names of regions below the city level (parks, memorials, estates, etc.) may be shown in the image title.
    - 5.9\. Names like: "My backyard", "I am near my house" are unacceptable. Also unacceptable are vulgar place names such as "Old Smoke", "The Valleys", etc. Such informal names, if desired, should be mentioned in the description.
    - 5.10\. Names of streets and other objects should be given as of the date of image. It is permissible to give the current name in parentheses if it differs from the previous one. In cases where the year of the photo is unknown, and the name was changed within the supposed period, write both names, e.g. for a photo taken between 1930 and 1940: College Road (Eton College Road).
-   - 5.11\. Do not disregard author titles, of course, if they
-       - \- are known;
-       - \- are not indecent;
-       - \- do not contain obvious errors and do not contradict the historical truth.
-   - 5.12\. Titles should not contain abbreviations other than those permitted in addresses (e.g., "str.", "cres.", "av.", "sq." etc.), initials, and the similar.
+   - 5.11\. It is acceptable (but not mandatory) to retain the original titles if they are known, are not offensive, do not contain obvious errors, do not contradict historical facts, and are consistent with the general approach to naming images on the website ("Spring on Oxford Street" is acceptable, "Spring is here!" is not). The moderator decides whether to keep the original title or not.
+   - 5.12\. If the author's title of the image is known and contained in the specified source, it should be indicated in quotation marks in the image description field.
+   - 5.13\. Titles should not contain abbreviations other than those permitted in addresses (e.g., "str.", "cres.", "av.", "sq." etc.), initials, and the similar.
 
 - 6\. Specifying authorship and sources
    - 6.1\. The site administration is very interested in the fact that users indicate the source from which the images were borrowed accurately in the appropriate field. In the case where the source is not indicated, or indicated knowingly falsely, and the legal owner of the site presents claims, paragraph 1.16 of these Rules comes into force. A dishonest attitude towards the indication of the source of the image(s) may lead to civil or criminal liability in accordance with the current legislation.
