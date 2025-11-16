@@ -39,7 +39,7 @@ import {MainTeam, AlumniTeam} from '@site/src/components/Teams';
   * [Второй раунд краудфандинга](https://pastvu.com/news/105)
 * 2014
   * [Улучшение функционала комментариев](https://pastvu.com/news/110) - больше возможностей для модераторов.
-  * [Настраиваемые ватермарки](https://pastvu.com/news/120)
+  * [Настраиваемые вотермарки](https://pastvu.com/news/120)
 * 2015
   * [История изменений фотографии](https://pastvu.com/news/123) - сохраняются все действия по модификации атрибутов.
   * [Новые правила PastVu](https://pastvu.com/news/130)
