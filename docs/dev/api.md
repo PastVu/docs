@@ -9,6 +9,10 @@ sidebar_position: 3
 
 # PastVu API
 
+:::warning Deprecated Endpoint
+The API endpoint `https://pastvu.com/api2` has been deprecated in favor of `https://api.pastvu.com/api2`. Please update your integrations to use the new endpoint.
+:::
+
 :::info
 To retrieve a photo, you need to add the contents of the `file` field from the API method response to the URL:
 * `https://pastvu.com/_p/d/` for standard size;
@@ -28,7 +32,7 @@ cid | ✓ | int | unique photo number |
 
 **Query example:**
 
-`https://pastvu.com/api2?method=photo.giveForPage&params={"cid":5}`
+`https://api.pastvu.com/api2?method=photo.giveForPage&params={"cid":5}`
 
 ### comment.giveForObj
 
@@ -40,7 +44,7 @@ cid | ✓ | int | unique photo number |
 
 **Query example:**
 
-`https://pastvu.com/api2?method=comment.giveForObj&params={"cid":23314}`
+`https://api.pastvu.com/api2?method=comment.giveForObj&params={"cid":23314}`
 
 ### photo.giveNearestPhotos
 Returns an array of photos closest to the passed coordinate. The array is sorted in ascending distance order.
@@ -58,7 +62,7 @@ skip | int | | skip the specified number of photos from the beginning of the sea
 
 **Query example:**
 
-`https://pastvu.com/api2?method=photo.giveNearestPhotos&params={"geo":[37.82,-122.469322],"limit":12,"except":228481}`
+`https://api.pastvu.com/api2?method=photo.giveNearestPhotos&params={"geo":[37.82,-122.469322],"limit":12,"except":228481}`
 
 ### photo.getByBounds
 
@@ -75,5 +79,5 @@ localWork | | bool | 0 | return array of `photos` (set 1 when using zoom value >
 
 **Query example:**
 
-`https://pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37. 95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
+`https://api.pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37. 95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
 

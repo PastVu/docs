@@ -9,6 +9,10 @@ sidebar_position: 3
 
 # PastVu API
 
+:::warning Устаревший адрес
+API `https://pastvu.com/api2` устарел. Пожалуйста, обновите ваши интеграции для использования нового адреса `https://api.pastvu.com/api2`.
+:::
+
 :::info
 Для получения фото, необходимо к URL добавить содержимое поля `file` из ответа API метода:
 * `https://pastvu.com/_p/d/` для стандартного размера;
@@ -28,7 +32,7 @@ cid | ✓ | int | уникальный номер снимка |
 
 **Пример запроса:**
 
-`https://pastvu.com/api2?method=photo.giveForPage&params={"cid":5}`
+`https://api.pastvu.com/api2?method=photo.giveForPage&params={"cid":5}`
 
 ### comment.giveForObj
 
@@ -40,7 +44,7 @@ cid | ✓ | int | уникальный номер снимка |
 
 **Пример запроса:**
 
-`https://pastvu.com/api2?method=comment.giveForObj&params={"cid":23314}`
+`https://api.pastvu.com/api2?method=comment.giveForObj&params={"cid":23314}`
 
 ### photo.giveNearestPhotos
 Возвращает массив фотографий, ближайших переданной координате. Массив отсортирован по возрастанию расстояния.
@@ -58,7 +62,7 @@ skip | | int | | пропустить указанное количество ф
 
 **Пример запроса:**
 
-`https://pastvu.com/api2?method=photo.giveNearestPhotos&params={"geo":[37.82,-122.469322],"limit":12,"except":228481}`
+`https://api.pastvu.com/api2?method=photo.giveNearestPhotos&params={"geo":[37.82,-122.469322],"limit":12,"except":228481}`
 
 ### photo.getByBounds
 
@@ -75,5 +79,5 @@ localWork | | bool | 0 | возвращать массив `photos` (следу�
 
 **Пример запроса:**
 
-`https://pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37.95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
+`https://api.pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37.95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
 
