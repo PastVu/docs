@@ -9,12 +9,18 @@ sidebar_position: 3
 
 # PastVu API
 
-:::warning Deprecated Endpoint
+:::warning Deprecated
 The API endpoint `https://pastvu.com/api2` has been deprecated in favor of `https://api.pastvu.com/api2`. Please update your integrations to use the new endpoint.
 :::
 
 :::info
 To retrieve a photo, you need to add the contents of the `file` field from the API method response to the URL:
+* `https://img.pastvu.com/d/` for standard size;
+* `https://img.pastvu.com/a/` for original size;
+* `https://img.pastvu.com/h/` for thumbnail size.
+:::
+
+:::warning Deprecated
 * `https://pastvu.com/_p/d/` for standard size;
 * `https://pastvu.com/_p/a/` for original size;
 * `https://pastvu.com/_p/h/` for thumbnail size.

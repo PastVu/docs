@@ -15,6 +15,12 @@ API `https://pastvu.com/api2` устарел. Пожалуйста, обнови
 
 :::info
 Для получения фото, необходимо к URL добавить содержимое поля `file` из ответа API метода:
+* `https://img.pastvu.com/d/` для стандартного размера;
+* `https://img.pastvu.com/a/` для оригинального размера;
+* `https://img.pastvu.com/h/` для миниатюры.
+:::
+
+:::warning Устаревшие адреса
 * `https://pastvu.com/_p/d/` для стандартного размера;
 * `https://pastvu.com/_p/a/` для оригинального размера;
 * `https://pastvu.com/_p/h/` для миниатюры.
