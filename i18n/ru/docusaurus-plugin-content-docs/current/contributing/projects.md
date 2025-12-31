@@ -10,6 +10,7 @@ tags:
 
 - Мобильное приложение PastVu с [открытым исходным кодом](https://github.com/pelixpng/PastVuApp). Доступно в [AppStore](https://apps.apple.com/app/pastvu-com/id6482482875) и [Google Play](https://play.google.com/store/apps/details?id=com.pelixpng.PastVuApp).
 - Мобильное приложение PastVu Map. Доступно в [AppStore](https://apps.apple.com/app/pastvu-com/id6499492010)
+- [Rewind](https://github.com/chizberg/Rewind) - нативное iOS приложение. [Доступно в App Store](https://apps.apple.com/app/rewind-history-on-a-map/id6755358800)
 - [Notimaps](https://notimaps.com) - сервис фильтрации информации на основе геоданных предлагает PastVu как один из провайдеров обновлений на карте ([пример](https://notimaps.com/map/55.750745/37.610398/12.79/661799623d3cd21b409c3e6a/)).
 - [retromap.ru](https://retromap.ru) показывает фотографии PastVu с привязкой к старинным картам.
 - [@PastvuBot](https://t.me/PastvuBot) Телеграм-бот, который отправляет исторические фотографии PastVu для запрашиваемого местоположения ([source code](https://github.com/ratmirslv/pastvu-bot))
