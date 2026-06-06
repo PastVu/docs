@@ -15,6 +15,7 @@ Most of the listed projects are not localised, consider reaching authors of open
 
 - Mobile application PastVu ([open source code](https://github.com/pelixpng/PastVuApp)). Available at [AppStore](https://apps.apple.com/app/pastvu-com/id6482482875) and [Google Play](https://play.google.com/store/apps/details?id=com.pelixpng.PastVuApp).
 - Mobile application PastVu Map. Available at [AppStore](https://apps.apple.com/app/pastvu-com/id6499492010).
+- [Rewind](https://github.com/chizberg/Rewind) - a native iOS app. [Available on the App Store](https://apps.apple.com/app/rewind-history-on-a-map/id6755358800).
 - [Notimaps](https://notimaps.com) is a service for filtering information based on geolocation, it offers PastVu as a source of events ([example](https://notimaps.com/map/55.750745/37.610398/12.79/661799623d3cd21b409c3e6a/)).
 - [retromap.ru](https://retromap.ru) displays PastVu photos on old maps.
 - [@PastvuBot](https://t.me/PastvuBot) is Telegram bot that sends PastVu historical photos for requested location ([source code](https://github.com/ratmirslv/pastvu-bot)).
