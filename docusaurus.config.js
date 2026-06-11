@@ -29,7 +29,6 @@ const config = {
   url: 'https://docs.pastvu.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: './img/favicon.ico',
   trailingSlash: false,
 
@@ -49,6 +48,9 @@ const config = {
     },
   },
   markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
     remarkRehypeOptions: {
         footnoteLabel: getLocalizedConfigValue('remarkRehypeOptions_footnotes'),
     },
