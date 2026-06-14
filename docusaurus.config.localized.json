@@ -1,0 +1,18 @@
+{
+  "title": {
+    "en": "PastVu Resources",
+    "ru": "База знаний PastVu"
+  },
+  "tagline": {
+    "en": "PastVu is an online platform for gathering, geo-tagging, attributing and discussing retro photos",
+    "ru": "Проект по сбору свидетельств прошлого в фотографиях, взгляд на историю среды обитания человечества"
+  },
+  "remarkRehypeOptions_footnotes": {
+    "en": "Footnotes",
+    "ru": "Примечания"
+  },
+  "footer_copyright": {
+    "en": "PastVu documentation. Built with Docusaurus. Content is licensed under <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-BY 4.0</a>.",
+    "ru": "База знаний PastVu. Сделано на Docusaurus. Материал этого сайта доступен по лицензии <a href=\"https://creativecommons.org/licenses/by/4.0/deed.ru\">CC-BY 4.0</a>."
+  }
+}

@@ -1,18 +1,34 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+import ConfigLocalized from './docusaurus.config.localized.json';
 
 const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
+const defaultLocale = 'ru';
+
+function getLocalizedConfigValue(key) {
+  const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
+  const values = ConfigLocalized[key];
+  if (!values) {
+    throw new Error(`Localized config key=${key} not found`);
+  }
+  const value = values[currentLocale] ?? values[defaultLocale];
+  if (!value) {
+    throw new Error(
+      `Localized value for config key=${key} not found for both currentLocale=${currentLocale} or defaultLocale=${defaultLocale}`,
+    );
+  }
+  return value;
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PastVu Resources',
-  tagline: 'PastVu is an online platform for gathering, geo-tagging, attributing and discussing retro photos.',
+  title: getLocalizedConfigValue('title'),
+  tagline: getLocalizedConfigValue('tagline'),
   url: 'https://docs.pastvu.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: './img/favicon.ico',
   trailingSlash: false,
 
@@ -20,7 +36,7 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'ru',
+    defaultLocale: defaultLocale,
     locales: ['en', 'ru'],
     localeConfigs: {
       en: {
@@ -29,6 +45,14 @@ const config = {
       ru: {
         htmlLang: 'ru-RU',
       },
+    },
+  },
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+    remarkRehypeOptions: {
+        footnoteLabel: getLocalizedConfigValue('remarkRehypeOptions_footnotes'),
     },
   },
   plugins: ['docusaurus-plugin-sass',
@@ -111,7 +135,7 @@ const config = {
         ],
       },
       footer: {
-        copyright: `© ${new Date().getFullYear()} PastVu documentation. Built with Docusaurus.`, // Not in use, see i18n/en/docusaurus-theme-classic/footer.json
+        copyright: `© ${new Date().getFullYear()}&nbsp;` + getLocalizedConfigValue('footer_copyright'), // Not in use, see i18n/en/docusaurus-theme-classic/footer.json
       },
       prism: {
         theme: lightCodeTheme,
