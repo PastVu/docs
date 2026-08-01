@@ -65,10 +65,11 @@ The example does not include every field of the `photo` object. Depending on the
 Field | Type | Description |
 --- | --- | --- |
 `result.photo.cid` | int | photo identifier |
+`result.photo.type` | int | object type: `1` for photo, `2` for painting |
 `result.photo.file` | string | relative path to the image file; prepend one of the image URLs listed above |
 `result.photo.title` | string | photo title |
 `result.photo.y` | string | displayed photo date |
-`result.photo.year`, `result.photo.year2` | int | beginning and end of the photo date range |
+`result.photo.year`, `result.photo.year2` | int | first and last year of the object date range |
 `result.can` | object | actions available to the current user |
 `result.forEdit` | bool | whether editing data is included in the response |
 `rid` | string | request identifier used for diagnostics |
