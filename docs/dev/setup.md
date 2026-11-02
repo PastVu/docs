@@ -20,14 +20,12 @@ allow you to start with development.
 You need to have [docker](https://docs.docker.com/engine/install/) and [compose](https://docs.docker.com/compose/cli-command/) installed first.
 
 ```bash
-# Start Mongo container in background
-docker compose up -d mongo
-# Import Pastvu database
-docker compose exec mongo initdb
 # Create config file
 cp ./config/local.config.js.docker-example ./config/local.config.js
+# Get the dump
+wget https://archive.varlamov.me/pastvu/github/pastvu.gz
 # Install node modules
-docker compose run --rm --no-deps app npm install
+docker compose run --rm app npm install
 # Start the application
 docker compose up
 ```
