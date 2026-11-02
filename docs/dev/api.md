@@ -30,7 +30,7 @@ The following methods are supported:
 
 ### photo.giveForPage
 
-Returns information about the photo by its number.
+Returns the data needed to display a photo page by its `cid`.
 
 Parameter | Mandatory | Type | Description |
 --- | --- | --- | --- |
@@ -38,7 +38,50 @@ cid | ✓ | int | unique photo number |
 
 **Query example:**
 
-`https://api.pastvu.com/api2?method=photo.giveForPage&params={"cid":5}`
+`https://api.pastvu.com/api2?method=photo.giveForPage&params={"cid":2131190}`
+
+**Response example (shortened):**
+
+```json
+{
+  "result": {
+    "photo": {
+      "cid": 2131190,
+      "file": "path/to/photo.jpg",
+      "title": "Надвоицкий водопад",
+      "y": "1925—1926",
+      "year": 1925,
+      "year2": 1926
+    },
+    "can": {},
+    "forEdit": false
+  },
+  "rid": "..."
+}
+```
+
+The example does not include every field of the `photo` object. Depending on the photo and the current user, it may also contain location, author, and region data.
+
+Field | Type | Description |
+--- | --- | --- |
+`result.photo.cid` | int | photo identifier |
+`result.photo.type` | int | object type: `1` for photo, `2` for painting |
+`result.photo.file` | string | relative path to the image file; prepend one of the image URLs listed above |
+`result.photo.title` | string | photo title |
+`result.photo.y` | string | displayed photo date |
+`result.photo.year`, `result.photo.year2` | int | first and last year of the object date range |
+`result.can` | object | actions available to the current user |
+`result.forEdit` | bool | whether editing data is included in the response |
+`rid` | string | request identifier used for diagnostics |
+
+**Errors:**
+
+Code | When returned |
+--- | --- |
+`BAD_PARAMS` | `cid` is missing, is not a number, or is less than 1 |
+`NO_SUCH_PHOTO` | the photo does not exist or is not available to the current user |
+
+API errors are returned as JSON with a top-level `code` field and HTTP status `200 OK`. Check `code` rather than relying on the HTTP status alone.
 
 ### comment.giveForObj
 
@@ -86,4 +129,3 @@ localWork | | bool | 0 | return array of `photos` (set 1 when using zoom value >
 **Query example:**
 
 `https://api.pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37. 95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
-
