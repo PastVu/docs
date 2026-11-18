@@ -93,6 +93,8 @@ cid | ✓ | int | | unique object number |
 type | | string | `photo` | object type: `photo` or `news` |
 showDel | | bool | `false` | include deleted comments when the authenticated user has permission to view them |
 
+Only the exact value `news` selects a news item. If `type` is omitted or has any other value, the method handles `cid` as a photo number. `showDel` has no effect on anonymous requests.
+
 **Query example:**
 
 `https://api.pastvu.com/api2?method=comment.giveForObj&params={"cid":539434}`
@@ -169,7 +171,9 @@ Field | Type | Description |
 `result.latestCid` | int | number of the newest comment |
 `rid` | string | request identifier used for diagnostics |
 
-Authenticated responses also include `countNew`, `countDel`, `canModerate`, and `canReply`. Individual comments can include permission and unread-status fields.
+Authenticated responses also include `countNew`, `countDel`, and `canReply`. `canModerate` is `true` for a moderator of the object and is otherwise omitted. Individual comments can include permission and unread-status fields.
+
+An authenticated request records the current time as the user's last comment view, resets the new-comment counter, and can clear a scheduled comment notification for the object.
 
 With `showDel: true`, an eligible deleted comment is returned as a placeholder with `del: true`. Its `txt` and nested `comments` fields are omitted.
 
