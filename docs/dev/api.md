@@ -233,6 +233,8 @@ Use `localWork: false` to receive precomputed clusters for the requested `z`. Th
 
 Use `localWork: true` to receive in `photos` every object whose coordinates are inside `geometry`. The server does not return `clusters`; the PastVu map clusters these objects in the browser.
 
+Direct lookup has no server-side result limit or pagination, and `z` does not reduce the number of matched objects. Keep `geometry` small enough for the client to receive and process the complete response.
+
 **Query example:**
 
 `https://api.pastvu.com/api2?method=photo.getByBounds&params={"z":17,"geometry":{"type":"Polygon","coordinates":[[[-122.49,37.80],[-122.45,37.80],[-122.45,37.84],[-122.49,37.84],[-122.49,37.80]]]},"year":1936,"year2":1936,"localWork":true,"startAt":1731931200000}`
