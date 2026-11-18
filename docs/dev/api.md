@@ -96,22 +96,66 @@ cid | ✓ | int | unique photo number |
 `https://api.pastvu.com/api2?method=comment.giveForObj&params={"cid":23314}`
 
 ### photo.giveNearestPhotos
-Returns an array of photos closest to the passed coordinate. The array is sorted in ascending distance order.
+
+Returns public photos or paintings nearest to the specified point. Results are sorted from nearest to farthest, but the distance itself is not included in the response.
 
 Parameter | Mandatory | Type | Default | Description |
 --- | --- | --- | --- | --- |
-geo | ✓ | array [lat, lon] | coordinates |
-except| | int | | exclude `cid` photo from the output |
-distance| | int | 10000 | maximum distance in meters (\<= 1000km) |
-year | int | | lower limit of the year of the photo
-year2 | int | | upper limit of the year of the picture |
-type | string | `photo` or `painting` |
-limit | int | 30 | number of photos requested (\<= 30) |
-skip | int | | skip the specified number of photos from the beginning of the search result (for page output) |
+geo | ✓ | array [lat, lon] | | search point as latitude and longitude |
+except | | int | | `cid` of an object to exclude from the results |
+distance | | int | 10000 | search radius in meters, from 1 to 1000000 |
+year | | int | | lower bound for the `year` field |
+year2 | | int | | upper bound for the `year` field |
+type | | int | 1 | object type: `1` for photo, `2` for painting |
+limit | | int | 30 | number of results, from 1 to 30 |
+skip | | int | 0 | number of results to skip, from 0 to 999 |
 
 **Query example:**
 
 `https://api.pastvu.com/api2?method=photo.giveNearestPhotos&params={"geo":[37.82,-122.469322],"limit":12,"except":228481}`
+
+**Response example (shortened):**
+
+```json
+{
+  "result": {
+    "photos": [
+      {
+        "s": 5,
+        "cid": 449459,
+        "file": "path/to/photo.jpg",
+        "title": "View of the Marin Tower of the Golden Gate Bridge under construction",
+        "dir": "nw",
+        "geo": [37.82287, -122.474985],
+        "year": 1934
+      }
+    ]
+  },
+  "rid": "..."
+}
+```
+
+The example does not include every field that may be present in a returned object.
+
+Field | Type | Description |
+--- | --- | --- |
+`result.photos` | array | objects sorted from nearest to farthest |
+`result.photos[].s` | int | publication status; the method returns objects with status `5` |
+`result.photos[].cid` | int | object identifier |
+`result.photos[].file` | string | relative path to the image file; prepend one of the image URLs listed above |
+`result.photos[].title` | string | object title |
+`result.photos[].dir` | string | shooting direction code |
+`result.photos[].geo` | array [lat, lon] | object coordinates |
+`result.photos[].year` | int | first year of the object date range |
+`rid` | string | request identifier used for diagnostics |
+
+**Errors:**
+
+Code | When returned |
+--- | --- |
+`BAD_PARAMS` | `geo` is missing or is not a valid latitude and longitude pair |
+
+API errors are returned as JSON with a top-level `code` field and HTTP status `200 OK`. Check `code` rather than relying on the HTTP status alone.
 
 ### photo.getByBounds
 
