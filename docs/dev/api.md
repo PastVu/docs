@@ -159,12 +159,12 @@ API errors are returned as JSON with a top-level `code` field and HTTP status `2
 
 ### photo.getByBounds
 
-Returns public photos or paintings inside a GeoJSON `Polygon` or `MultiPolygon`. The response depends on `localWork`:
+Returns public photo or painting data for a map area defined by a GeoJSON `Polygon` or `MultiPolygon`. The selection rule depends on `localWork`:
 
 `localWork` | Mode | Response |
 --- | --- | --- |
-`false` | server-side clustering | single objects in `photos` and groups of objects in `clusters` |
-`true` | direct object lookup | all matching objects in `photos`; `clusters` is omitted |
+`false` | server-side clustering | cluster cells selected by their grid position `g`; single-object cells are returned in `photos` and groups in `clusters` |
+`true` | direct object lookup | objects whose coordinates are inside `geometry`, returned in `photos`; `clusters` is omitted |
 
 `localWork` is not selected automatically from `z` when `geometry` is used. Set it explicitly. The PastVu map uses server-side clustering through zoom level 16 and direct lookup from zoom level 17.
 
@@ -175,16 +175,18 @@ Parameter | Mandatory | Type | Default | Description |
 geometry | ✓ | GeoJSON `Polygon` or `MultiPolygon` | | search area |
 z | ✓ | int | | zoom level, starting with `1`; selects the server cluster grid in cluster mode and is echoed in the response |
 isPainting | | bool | `false` | search paintings instead of photos |
-year | | int | | first year of the date range; use together with `year2` |
-year2 | | int | | last year of the date range; use together with `year` |
+year | | int | | lower bound for the object's `year` field; use together with `year2` |
+year2 | | int | | upper bound for the object's `year` field; use together with `year` |
 localWork | | bool | `false` | use direct object lookup instead of server-side clusters |
 startAt | | int | | client request marker echoed unchanged in the response |
 
-The year filter is applied only when both values are numbers, `year` is not greater than `year2`, and both values are within the supported range: 1826–2000 for photos or -100–1980 for paintings. The selected interval must be shorter than the complete supported range. Otherwise, the year filter is ignored.
+The year filter matches the object's first year (`year`) only. It does not test whether the complete `year`–`year2` object date range overlaps the requested interval. For example, an object dated 1930–1940 is not returned for a 1936–1936 request.
+
+The filter is applied only when both values are numbers, `year` is not greater than `year2`, and both values are within the supported range: 1826–2000 for photos or -100–1980 for paintings. The selected interval must be shorter than the complete supported range. Otherwise, the year filter is ignored.
 
 #### Server-side clustering
 
-Use `localWork: false` to receive precomputed clusters for the requested `z`. A cluster cell containing one object is returned in `photos`; a cell containing multiple objects is returned in `clusters`.
+Use `localWork: false` to receive precomputed clusters for the requested `z`. The server selects a cluster when its grid position `g` is inside `geometry`; it does not test every object in that cluster against the polygon. Near the boundary, the response can therefore include objects outside the polygon or omit objects inside it. A selected cluster cell containing one object is returned in `photos`; a cell containing multiple objects is returned in `clusters`.
 
 **Query example:**
 
@@ -229,7 +231,7 @@ Use `localWork: false` to receive precomputed clusters for the requested `z`. A 
 
 #### Direct object lookup
 
-Use `localWork: true` to receive every matching object in `photos`. The server does not return `clusters`; the PastVu map clusters these objects in the browser.
+Use `localWork: true` to receive in `photos` every object whose coordinates are inside `geometry`. The server does not return `clusters`; the PastVu map clusters these objects in the browser.
 
 **Query example:**
 
