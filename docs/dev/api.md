@@ -158,17 +158,25 @@ Field | Type | Description |
 `result.comments[].cid` | int | unique comment number |
 `result.comments[].user` | string | comment author's login; corresponding profile data is in `result.users` |
 `result.comments[].stamp` | int | comment creation time as a Unix timestamp in milliseconds |
-`result.comments[].txt` | string | comment text as HTML |
+`result.comments[].txt` | string | comment text as HTML; omitted for a deleted-comment placeholder |
 `result.comments[].parent` | int | parent comment number; included for replies |
 `result.comments[].level` | int | nesting level, starting with `0` for a top-level comment |
-`result.comments[].comments` | array | direct replies to the comment |
+`result.comments[].comments` | array | direct replies to the comment; omitted for a deleted-comment placeholder |
+`result.comments[].del` | bool | `true` for a deleted-comment placeholder returned with `showDel` |
 `result.comments[].latest` | bool | whether this is the newest comment in the tree |
 `result.countTotal` | int | total number of non-deleted comments, including nested replies |
-`result.users` | object | comment authors keyed by login; omitted when the object has no comments |
-`result.latestCid` | int | number of the newest comment, or `0` when there are no comments |
+`result.users` | object | comment authors keyed by login |
+`result.latestCid` | int | number of the newest comment |
 `rid` | string | request identifier used for diagnostics |
 
 Authenticated responses also include `countNew`, `countDel`, `canModerate`, and `canReply`. Individual comments can include permission and unread-status fields.
+
+With `showDel: true`, an eligible deleted comment is returned as a placeholder with `del: true`. Its `txt` and nested `comments` fields are omitted.
+
+When no comments match, the empty response depends on authentication:
+
+- an anonymous response omits `users` and includes `latestCid: 0`;
+- an authenticated response includes `users: {}` and omits `latestCid`.
 
 **Errors:**
 
