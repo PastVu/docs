@@ -256,17 +256,135 @@ API errors are returned as JSON with a top-level `code` field and HTTP status `2
 
 ### photo.getByBounds
 
-Returns photos and clusters on the map by the passed zoom, GeoJSON object (Polygon or MultiPolygon) and optional year limit. The sequence of points in the array that forms the polygon must follow a counterclockwise path to sample objects within its boundaries (see [RFC7946 3.1.6](https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6)). The order of coordinates at points is `[lon, lat]`. From zoom 17 and up only photos are returned, for zoom level 16 and below both photos and clusters can be returned.
+Returns public photo or painting data for a map area defined by a GeoJSON `Polygon` or `MultiPolygon`. The selection rule depends on `localWork`:
+
+`localWork` | Mode | Response |
+--- | --- | --- |
+`false` | server-side clustering | cluster cells selected by their grid position `g`; single-object cells are returned in `photos` and groups in `clusters` |
+`true` | direct object lookup | objects whose coordinates are inside `geometry`, returned in `photos`; `clusters` is omitted |
+
+`localWork` is not selected automatically from `z` when `geometry` is used. Set it explicitly. The PastVu map uses server-side clustering through zoom level 16 and direct lookup from zoom level 17.
+
+GeoJSON positions use `[lon, lat]`. Close each polygon ring by repeating its first position at the end. The exterior ring must follow a counterclockwise path; see [RFC 7946, section 3.1.6](https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6).
 
 Parameter | Mandatory | Type | Default | Description |
 --- | --- | --- | --- | --- |
-geometry | ✓ | GeoJSON (Polygon or MultiPolygon) | search area |
-z | ✓ | int | |  zoom level
-isPainting | | bool | 0 | return only pictures in the response |
-year | | int | | lower limit of the year of the photo |
-year2 | | int | | upper limit of the year of the photo |
-localWork | | bool | 0 | return array of `photos` (set 1 when using zoom value >= 17) |
+geometry | ✓ | GeoJSON `Polygon` or `MultiPolygon` | | search area |
+z | ✓ | int | | zoom level, starting with `1`; selects the server cluster grid in cluster mode and is echoed in the response |
+isPainting | | bool | `false` | search paintings instead of photos |
+year | | int | | lower bound for the object's `year` field; use together with `year2` |
+year2 | | int | | upper bound for the object's `year` field; use together with `year` |
+localWork | | bool | `false` | use direct object lookup instead of server-side clusters |
+startAt | | int | | client request marker echoed unchanged in the response |
+
+The year filter matches the object's first year (`year`) only. It does not test whether the complete `year`–`year2` object date range overlaps the requested interval. For example, an object dated 1930–1940 is not returned for a 1936–1936 request.
+
+The filter is applied only when both values are numbers, `year` is not greater than `year2`, and both values are within the supported range: 1826–2000 for photos or -100–1980 for paintings. The selected interval must be shorter than the complete supported range. Otherwise, the year filter is ignored.
+
+#### Server-side clustering
+
+Use `localWork: false` to receive precomputed clusters for the requested `z`. The server selects a cluster when its grid position `g` is inside `geometry`; it does not test every object in that cluster against the polygon. Near the boundary, the response can therefore include objects outside the polygon or omit objects inside it. A selected cluster cell containing one object is returned in `photos`; a cell containing multiple objects is returned in `clusters`.
 
 **Query example:**
 
-`https://api.pastvu.com/api2?method=photo.getByBounds&params={"z":11,"geometry":{"type":"Polygon","coordinates":[[[37.29034423828125,55.56902805913944],[37. 95501708984375,55.56902805913944],[37.95501708984375,55.92150795277898],[37.29034423828125,55.92150795277898],[37.29034423828125,55.56902805913944]]]}}`
+`https://api.pastvu.com/api2?method=photo.getByBounds&params={"z":16,"geometry":{"type":"Polygon","coordinates":[[[-122.49,37.80],[-122.45,37.80],[-122.45,37.84],[-122.49,37.84],[-122.49,37.80]]]},"localWork":false}`
+
+**Response example (shortened):**
+
+```json
+{
+  "result": {
+    "z": 16,
+    "photos": [
+      {
+        "cid": 1953913,
+        "file": "path/to/photo.jpg",
+        "title": "Golden Gate Bridge construction, view from Fort Baker",
+        "dir": "s",
+        "geo": [37.836174, -122.477004],
+        "year": 1936,
+        "year2": 1936
+      }
+    ],
+    "clusters": [
+      {
+        "geo": [37.832943, -122.479384],
+        "c": 2,
+        "p": {
+          "cid": 561915,
+          "file": "path/to/poster.jpg",
+          "title": "Bus near Golden Gate Bridge",
+          "dir": "s",
+          "geo": [-122.479678, 37.832869],
+          "year": 1978,
+          "year2": 1978
+        }
+      }
+    ]
+  },
+  "rid": "request-id"
+}
+```
+
+#### Direct object lookup
+
+Use `localWork: true` to receive in `photos` every object whose coordinates are inside `geometry`. The server does not return `clusters`; the PastVu map clusters these objects in the browser.
+
+Direct lookup has no server-side result limit or pagination, and `z` does not reduce the number of matched objects. Keep `geometry` small enough for the client to receive and process the complete response.
+
+**Query example:**
+
+`https://api.pastvu.com/api2?method=photo.getByBounds&params={"z":17,"geometry":{"type":"Polygon","coordinates":[[[-122.49,37.80],[-122.45,37.80],[-122.45,37.84],[-122.49,37.84],[-122.49,37.80]]]},"year":1936,"year2":1936,"localWork":true,"startAt":1731931200000}`
+
+**Response example (shortened):**
+
+```json
+{
+  "result": {
+    "startAt": 1731931200000,
+    "z": 17,
+    "photos": [
+      {
+        "cid": 1953913,
+        "file": "path/to/photo.jpg",
+        "title": "Golden Gate Bridge construction, view from Fort Baker",
+        "dir": "s",
+        "geo": [37.836174, -122.477004],
+        "year": 1936,
+        "year2": 1936
+      }
+    ]
+  },
+  "rid": "request-id"
+}
+```
+
+**Key response fields:**
+
+Field | Type | Description |
+--- | --- | --- |
+`result.startAt` | int | request marker copied from the input; omitted when it was not passed |
+`result.z` | int | requested zoom level |
+`result.photos` | array | standalone objects in cluster mode or all matching objects in direct lookup mode |
+`result.photos[].cid` | int | unique object number |
+`result.photos[].file` | string | relative image path |
+`result.photos[].dir` | string | shooting direction; omitted when it is not set |
+`result.photos[].title` | string | object title |
+`result.photos[].geo` | array [lat, lon] | object coordinates as latitude and longitude |
+`result.photos[].year`, `result.photos[].year2` | int | first and last year of the object date range |
+`result.clusters` | array | server-side clusters; omitted in direct lookup mode |
+`result.clusters[].c` | int | number of objects in the cluster |
+`result.clusters[].geo` | array [lat, lon] | cluster center coordinates |
+`result.clusters[].p` | object | object used as the cluster poster |
+`result.clusters[].p.geo` | array [lon, lat] | poster coordinates; unlike `photos[].geo` and cluster `geo`, longitude comes first |
+`result.clusters[].g` | array [lon, lat] | cluster grid position; included when the year filter is applied |
+`result.clusters[].y` | object | object counts grouped by year; included when the year filter is applied |
+`rid` | string | request identifier used for diagnostics |
+
+**Errors:**
+
+Code | When returned |
+--- | --- |
+`BAD_PARAMS` | `geometry.type` is not `Polygon` or `MultiPolygon`, or `z` is not a number greater than or equal to `1` |
+
+API errors are returned as JSON with a top-level `code` field and HTTP status `200 OK`. Check `code` rather than relying on the HTTP status alone.
