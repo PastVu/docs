@@ -85,15 +85,112 @@ API errors are returned as JSON with a top-level `code` field and HTTP status `2
 
 ### comment.giveForObj
 
-Returns comment tree by photo number.
+Returns the comment tree for a photo or news item. Top-level comments are returned in `comments`; replies are nested in the parent comment's `comments` array.
 
-Parameter | Mandatory | Type | Description |
---- | --- | --- | --- |
-cid | ✓ | int | unique photo number |
+Parameter | Mandatory | Type | Default | Description |
+--- | --- | --- | --- | --- |
+cid | ✓ | int | | unique object number |
+type | | string | `photo` | object type: `photo` or `news` |
+showDel | | bool | `false` | include deleted comments when the authenticated user has permission to view them |
+
+Only the exact value `news` selects a news item. If `type` is omitted or has any other value, the method handles `cid` as a photo number. `showDel` has no effect on anonymous requests.
 
 **Query example:**
 
-`https://api.pastvu.com/api2?method=comment.giveForObj&params={"cid":23314}`
+`https://api.pastvu.com/api2?method=comment.giveForObj&params={"cid":539434}`
+
+**Response example (shortened):**
+
+```json
+{
+  "result": {
+    "comments": [
+      {
+        "cid": 1324546,
+        "user": "user1",
+        "stamp": 1488382828246,
+        "txt": "Вероятно, снимок сделан с территории Кремля...",
+        "s": 5,
+        "type": 1,
+        "level": 0,
+        "comments": [
+          {
+            "cid": 1324559,
+            "user": "user2",
+            "stamp": 1488384195442,
+            "txt": "Спасибо, поправлено.",
+            "parent": 1324546,
+            "level": 1,
+            "s": 5,
+            "type": 1,
+            "latest": true
+          }
+        ]
+      }
+    ],
+    "countTotal": 2,
+    "users": {
+      "user1": {
+        "disp": "User One",
+        "login": "user1",
+        "ranks": ["mec_gold", "adviser"],
+        "online": false
+      },
+      "user2": {
+        "avatar": "/_a/h/user2.png",
+        "disp": "User Two",
+        "login": "user2",
+        "ranks": [],
+        "online": false
+      }
+    },
+    "latestCid": 1324559,
+    "cid": 539434
+  },
+  "rid": "request-id"
+}
+```
+
+**Key response fields:**
+
+Field | Type | Description |
+--- | --- | --- |
+`result.cid` | int | requested object number |
+`result.comments` | array | top-level comments; replies are nested recursively in `comments` |
+`result.comments[].cid` | int | unique comment number |
+`result.comments[].user` | string | comment author's login; corresponding profile data is in `result.users` |
+`result.comments[].stamp` | int | comment creation time as a Unix timestamp in milliseconds |
+`result.comments[].txt` | string | comment text as HTML; omitted for a deleted-comment placeholder |
+`result.comments[].parent` | int | parent comment number; included for replies |
+`result.comments[].level` | int | nesting level, starting with `0` for a top-level comment |
+`result.comments[].comments` | array | direct replies to the comment; omitted for a deleted-comment placeholder |
+`result.comments[].del` | bool | `true` for a deleted-comment placeholder returned with `showDel` |
+`result.comments[].latest` | bool | whether this is the newest comment in the tree |
+`result.countTotal` | int | total number of non-deleted comments, including nested replies |
+`result.users` | object | comment authors keyed by login |
+`result.latestCid` | int | number of the newest comment |
+`rid` | string | request identifier used for diagnostics |
+
+Authenticated responses also include `countNew`, `countDel`, and `canReply`. `canModerate` is `true` for a moderator of the object and is otherwise omitted. Individual comments can include permission and unread-status fields.
+
+An authenticated request records the current time as the user's last comment view, resets the new-comment counter, and can clear a scheduled comment notification for the object.
+
+With `showDel: true`, an eligible deleted comment is returned as a placeholder with `del: true`. Its `txt` and nested `comments` fields are omitted.
+
+When no comments match, the empty response depends on authentication:
+
+- an anonymous response omits `users` and includes `latestCid: 0`;
+- an authenticated response includes `users: {}` and omits `latestCid`.
+
+**Errors:**
+
+Code | When returned |
+--- | --- |
+`BAD_PARAMS` | `cid` is missing, is `0`, or cannot be converted to a number |
+`NO_SUCH_PHOTO` | a photo does not exist or is not available to the current user |
+`COMMENT_NO_OBJECT` | a news item does not exist or is not available to the current user |
+
+API errors are returned as JSON with a top-level `code` field and HTTP status `200 OK`. Check `code` rather than relying on the HTTP status alone.
 
 ### photo.giveNearestPhotos
 
