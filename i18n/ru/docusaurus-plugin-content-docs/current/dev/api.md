@@ -18,6 +18,8 @@ API `https://pastvu.com/api2` устарел. Пожалуйста, обнови
 * `https://img.pastvu.com/d/` для стандартного размера;
 * `https://img.pastvu.com/a/` для оригинального размера;
 * `https://img.pastvu.com/h/` для миниатюры.
+
+Например, из `file: "path/to/photo.jpg"` получится адрес изображения стандартного размера `https://img.pastvu.com/d/path/to/photo.jpg`.
 :::
 
 :::warning Устаревшие адреса
@@ -25,6 +27,60 @@ API `https://pastvu.com/api2` устарел. Пожалуйста, обнови
 * `https://pastvu.com/_p/a/` для оригинального размера;
 * `https://pastvu.com/_p/h/` для миниатюры.
 :::
+
+## Выполнение запросов
+
+Отправляйте запросы на `https://api.pastvu.com/api2` методом `GET` или `POST`. Каждый запрос содержит:
+
+Поле | Обязательное | Тип | Описание |
+--- | --- | --- | --- |
+`method` | ✓ | string | название метода API |
+`params` |  | object | параметры метода; если поле не указано, используется пустой объект |
+
+В запросе `GET` передавайте `params` как JSON-строку. Кодируйте параметры URL, а не вставляйте JSON в адрес вручную:
+
+<!-- cspell:ignore urlencode -->
+```bash
+curl --get 'https://api.pastvu.com/api2' \
+  --data-urlencode 'method=photo.giveNearestPhotos' \
+  --data-urlencode 'params={"geo":[37.82,-122.469322],"limit":1}'
+```
+
+В запросе `POST` передавайте `method` и `params` в теле запроса в формате JSON:
+
+```bash
+curl --request POST 'https://api.pastvu.com/api2' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "method": "photo.giveNearestPhotos",
+    "params": {"geo": [37.82, -122.469322], "limit": 1}
+  }'
+```
+
+Успешный ответ содержит результат метода и идентификатор запроса:
+
+```json
+{
+  "result": {},
+  "rid": "..."
+}
+```
+
+Указывайте `rid`, когда сообщаете о проблеме: по нему запрос можно найти в журналах сервера.
+
+Ошибка API возвращается на верхнем уровне, без обёртки `result`:
+
+```json
+{
+  "type": "BadParamsError",
+  "code": "BAD_PARAMS",
+  "message": "Invalid request parameters"
+}
+```
+
+Ошибки API, включая неизвестный или недоступный метод, возвращаются со статусом HTTP `200 OK`. Проверяйте `code`, а не только статус HTTP или локализованное поле `message`.
+
+Если JSON-строку в `params` не удалось разобрать, сервер возвращает `400 Bad Request`. Для методов HTTP, отличных от `GET` и `POST`, сервер возвращает `405 Method Not Allowed` с заголовком `Allow: GET, POST`.
 
 Поддерживаются следующие методы:
 
