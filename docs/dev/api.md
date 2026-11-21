@@ -18,6 +18,8 @@ To retrieve a photo, you need to add the contents of the `file` field from the A
 * `https://img.pastvu.com/d/` for standard size;
 * `https://img.pastvu.com/a/` for original size;
 * `https://img.pastvu.com/h/` for thumbnail size.
+
+For example, `file: "path/to/photo.jpg"` becomes `https://img.pastvu.com/d/path/to/photo.jpg` for the standard-size image.
 :::
 
 :::warning Deprecated
@@ -25,6 +27,60 @@ To retrieve a photo, you need to add the contents of the `file` field from the A
 * `https://pastvu.com/_p/a/` for original size;
 * `https://pastvu.com/_p/h/` for thumbnail size.
 :::
+
+## Making requests
+
+Send requests to `https://api.pastvu.com/api2` using `GET` or `POST`. Each request contains:
+
+Field | Required | Type | Description |
+--- | --- | --- | --- |
+`method` | ✓ | string | API method name |
+`params` |  | object | method parameters; defaults to an empty object when omitted |
+
+For a `GET` request, pass `params` as a JSON-encoded string. Use URL encoding instead of inserting JSON into the URL manually:
+
+<!-- cspell:ignore urlencode -->
+```bash
+curl --get 'https://api.pastvu.com/api2' \
+  --data-urlencode 'method=photo.giveNearestPhotos' \
+  --data-urlencode 'params={"geo":[37.82,-122.469322],"limit":1}'
+```
+
+For a `POST` request, send `method` and `params` in a JSON body:
+
+```bash
+curl --request POST 'https://api.pastvu.com/api2' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "method": "photo.giveNearestPhotos",
+    "params": {"geo": [37.82, -122.469322], "limit": 1}
+  }'
+```
+
+A successful response contains the method result and a request identifier:
+
+```json
+{
+  "result": {},
+  "rid": "..."
+}
+```
+
+Include `rid` when reporting a problem: it can be used to find the request in server logs.
+
+An API error is returned at the top level, without a `result` wrapper:
+
+```json
+{
+  "type": "BadParamsError",
+  "code": "BAD_PARAMS",
+  "message": "Invalid request parameters"
+}
+```
+
+API errors, including an unknown or unavailable method, are returned with HTTP status `200 OK`. Check `code` rather than relying on the HTTP status or the localized `message` alone.
+
+The endpoint returns `400 Bad Request` when a JSON string in `params` cannot be parsed. HTTP methods other than `GET` and `POST` return `405 Method Not Allowed` with the `Allow: GET, POST` header.
 
 The following methods are supported:
 
