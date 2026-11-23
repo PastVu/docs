@@ -7,11 +7,11 @@ tags:
 
 # Improve Docs
 
-We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusaurus.io), a powerful open source documentation project written in JavaScript. All development and communication for this documentation resources takes place in this [GitHub repository](https://github.com/pastvu/docs).
+We welcome contributions to this documentation. Our documentation is built using [Docusaurus](https://docusaurus.io), a powerful open source documentation project written in JavaScript. Documentation development and communication take place in this [GitHub repository](https://github.com/pastvu/docs).
 
 Contributors are expected to adhere to the [code of conduct](./code-of-conduct).
 
-If you are new to contributing to open source project, you may find [this
+If you are new to contributing to an open source project, you may find [this
 guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
 useful.
 
@@ -39,7 +39,7 @@ You can also try using the new `github.dev` feature. While you are browsing any 
 
 ### Local installation
 
-To set up a local development environment we recommend install [NVM](https://github.com/nvm-sh/nvm), and then running:
+To set up a local development environment, we recommend installing [NVM](https://github.com/nvm-sh/nvm) and then running:
 
 ```console
 nvm install
@@ -67,7 +67,7 @@ Organising documents this way allows to fallback to English version of the page 
 Russian translation is missing.
 :::
 
-In order to make document appear in the page sidebar, the file should be added at default location (`docs/`). In this case the same document will be shown at both `en` and `ru` locales. To add the Russian translation, copy it to the matching destination at `i18n/ru/docusaurus-plugin-content-docs/current` and translate. For example, to translate `docs/dev/setup.md`, one need to make a copy:
+In order to make a document appear in the page sidebar, the file should be added at the default location (`docs/`). In this case the same document will be shown at both `en` and `ru` locales. To add the Russian translation, copy it to the matching destination at `i18n/ru/docusaurus-plugin-content-docs/current` and translate. For example, to translate `docs/dev/setup.md`, you need to make a copy:
 ```
 cp docs/dev/setup.md i18n/ru/docusaurus-plugin-content-docs/current/dev/setup.md
 ```
@@ -100,7 +100,7 @@ Please make sure the following is done when submitting a pull request:
 
 1. **Keep your PR small** - make sure the PR changes belong to the same scope, otherwise please split them.
 2. **Use descriptive titles** - you may use [commit message style](#semantic-commit-messages) for PR titles too.
-3. **Test your changes** - unless this is something trivial or changes existing text, makes sure you tested it in local dev server.
+3. **Test your changes** - unless the change is trivial or only updates existing text, make sure you test it on the local development server.
 
 All pull requests should be opened against the `main` branch.
 
